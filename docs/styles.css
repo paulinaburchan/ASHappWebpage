@@ -37,15 +37,13 @@ html,body{margin:0;padding:0;font-family:'Space Grotesk',system-ui,-apple-system
 .tiny-note{font-size:12px;color:var(--muted)}
 
 .hero-visual{display:flex;flex-direction:column;align-items:center;gap:30px}
-.hero-icons{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-bottom:20px}
-.icon-container{position:relative;display:flex;align-items:center;justify-content:center;width:80px;height:80px;background:#fff;border-radius:20px;box-shadow:0 8px 25px rgba(0,0,0,0.1);transition:all 0.3s ease;animation:iconEntrance 0.8s ease-out forwards;opacity:0;transform:translateY(20px)}
+.hero-icons{display:flex;gap:20px;margin-bottom:20px;justify-content:center}
+.icon-container{position:relative;display:flex;align-items:center;justify-content:center;width:60px;height:60px;background:#fff;border-radius:16px;box-shadow:0 6px 20px rgba(0,0,0,0.1);transition:all 0.3s ease;animation:iconEntrance 0.8s ease-out forwards;opacity:0;transform:translateY(20px)}
 .icon-container:nth-child(1){animation-delay:0.1s}
 .icon-container:nth-child(2){animation-delay:0.2s}
-.icon-container:nth-child(3){animation-delay:0.3s}
-.icon-container:nth-child(4){animation-delay:0.4s}
-.icon-container:hover{transform:translateY(-5px) scale(1.05);box-shadow:0 15px 35px rgba(0,0,0,0.15)}
-.hero-svg{width:50px;height:50px;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.1))}
-.icon-glow{position:absolute;top:0;left:0;right:0;bottom:0;border-radius:20px;background:linear-gradient(135deg, rgba(255,142,83,0.2), rgba(255,107,107,0.2));opacity:0;transition:opacity 0.3s ease}
+.icon-container:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 10px 25px rgba(0,0,0,0.15)}
+.hero-svg{width:32px;height:32px;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.1))}
+.icon-glow{position:absolute;top:0;left:0;right:0;bottom:0;border-radius:16px;background:linear-gradient(135deg, rgba(255,142,83,0.2), rgba(255,107,107,0.2));opacity:0;transition:opacity 0.3s ease}
 .icon-container:hover .icon-glow{opacity:1}
 
 @keyframes iconEntrance{
@@ -79,10 +77,10 @@ html,body{margin:0;padding:0;font-family:'Space Grotesk',system-ui,-apple-system
 .card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(0,0,0,.12);border-color:var(--highlight-light)}
 .card:hover::before{opacity:1}
 .card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg, var(--highlight), var(--pink));opacity:0;transition:opacity 0.3s ease}
-.card .icon-container{width:70px;height:70px;margin:0 auto 20px;background:linear-gradient(135deg, var(--highlight-light), var(--pink));border-radius:18px;box-shadow:0 6px 20px rgba(255,142,83,0.3);position:relative}
-.card .icon-container::after{content:'';position:absolute;top:-2px;left:-2px;right:-2px;bottom:-2px;background:linear-gradient(135deg, var(--highlight), var(--pink));border-radius:20px;z-index:-1;opacity:0;transition:opacity 0.3s ease}
+.card .icon-container{width:50px;height:50px;margin:0 auto 20px;background:linear-gradient(135deg, var(--highlight-light), var(--pink));border-radius:14px;box-shadow:0 4px 15px rgba(255,142,83,0.3);position:relative}
+.card .icon-container::after{content:'';position:absolute;top:-2px;left:-2px;right:-2px;bottom:-2px;background:linear-gradient(135deg, var(--highlight), var(--pink));border-radius:16px;z-index:-1;opacity:0;transition:opacity 0.3s ease}
 .card:hover .icon-container::after{opacity:0.3}
-.card-svg{width:40px;height:40px;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.1))}
+.card-svg{width:28px;height:28px;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.1))}
 .card h3{color:var(--green);margin:0 0 16px;font-size:22px;font-weight:700}
 .card p{color:#374151;line-height:1.7;margin:0;font-size:16px}
 
@@ -106,14 +104,14 @@ html,body{margin:0;padding:0;font-family:'Space Grotesk',system-ui,-apple-system
 .feature-visual{height:220px;border-radius:16px;background:linear-gradient(135deg, rgba(46,89,70,.15), rgba(255,107,107,.15));border:1px solid #d1d5db;position:relative;overflow:hidden}
 
 @keyframes listItemEntrance{
-  to{opacity:1;transform:translateX(0)}
+  to{opacity:1;transform:translateY(0)}
 }
 
 .floating-icons{position:relative;width:100%;height:100%}
-.floating-icon{position:absolute;width:60px;height:60px;filter:drop-shadow(0 4px 8px rgba(0,0,0,0.1))}
-.pig-float{top:20px;left:30px;animation:float 6s ease-in-out infinite}
-.brain-float{top:80px;right:40px;animation:float 6s ease-in-out infinite 2s}
-.bear-float{top:140px;left:50px;animation:float 6s ease-in-out infinite 4s}
+.floating-icon{position:absolute;width:40px;height:40px;filter:drop-shadow(0 4px 8px rgba(0,0,0,0.1))}
+.pig-float{top:30px;left:40px;animation:float 6s ease-in-out infinite}
+.brain-float{top:100px;right:50px;animation:float 6s ease-in-out infinite 2s}
+.bear-float{top:160px;left:60px;animation:float 6s ease-in-out infinite 4s}
 
 @keyframes float{
   0%, 100%{transform:translateY(0px)}
@@ -135,21 +133,21 @@ html,body{margin:0;padding:0;font-family:'Space Grotesk',system-ui,-apple-system
 @media (max-width:900px){
   .hero-inner{grid-template-columns:1fr}
   .grid-3{grid-template-columns:1fr 1fr;gap:20px}
-  .hero-icons{grid-template-columns:repeat(2,1fr);gap:15px}
-  .icon-container{width:70px;height:70px}
-  .hero-svg{width:45px;height:45px}
+  .hero-icons{gap:15px}
+  .icon-container{width:50px;height:50px}
+  .hero-svg{width:28px;height:28px}
   .card{padding:24px}
-  .card .icon-container{width:60px;height:60px}
-  .card-svg{width:35px;height:35px}
+  .card .icon-container{width:45px;height:45px}
+  .card-svg{width:24px;height:24px}
 }
 @media (max-width:600px){
   .nav{display:none}
   .nav-toggle{display:block}
   .grid-3{grid-template-columns:1fr;gap:18px}
-  .hero-icons{grid-template-columns:repeat(2,1fr);gap:12px}
-  .icon-container{width:60px;height:60px}
-  .hero-svg{width:40px;height:40px}
-  .floating-icon{width:50px;height:50px}
+  .hero-icons{gap:12px}
+  .icon-container{width:45px;height:45px}
+  .hero-svg{width:24px;height:24px}
+  .floating-icon{width:35px;height:35px}
   .page-hero h1{font-size:36px}
   .page-hero p{font-size:18px}
   .card{padding:20px}
