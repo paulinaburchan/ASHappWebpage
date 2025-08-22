@@ -41,7 +41,8 @@ html,body{margin:0;padding:0;font-family:'Space Grotesk',system-ui,-apple-system
 .icon-container:nth-child(1){animation-delay:0.1s}
 .icon-container:nth-child(2){animation-delay:0.2s}
 .icon-container:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 10px 25px rgba(0,0,0,0.15)}
-.hero-svg{width:32px;height:32px;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.1))}
+.hero-svg{width:32px;height:32px;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.1));filter:brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%)}
+.icon-container:hover .hero-svg{filter:brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%) drop-shadow(0 2px 4px rgba(0,0,0,0.1))}
 .icon-glow{position:absolute;top:0;left:0;right:0;bottom:0;border-radius:16px;background:linear-gradient(135deg, rgba(255,142,83,0.2), rgba(255,107,107,0.2));opacity:0;transition:opacity 0.3s ease}
 .icon-container:hover .icon-glow{opacity:1}
 
@@ -79,7 +80,7 @@ html,body{margin:0;padding:0;font-family:'Space Grotesk',system-ui,-apple-system
 .card .icon-container{width:50px;height:50px;margin:0 auto 20px;background:linear-gradient(135deg, var(--highlight-light), var(--pink));border-radius:14px;box-shadow:0 4px 15px rgba(255,142,83,0.3);position:relative}
 .card .icon-container::after{content:'';position:absolute;top:-2px;left:-2px;right:-2px;bottom:-2px;background:linear-gradient(135deg, var(--highlight), var(--pink));border-radius:16px;z-index:-1;opacity:0;transition:opacity 0.3s ease}
 .card:hover .icon-container::after{opacity:0.3}
-.card-svg{width:28px;height:28px;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.1))}
+.card-svg{width:28px;height:28px;filter:brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%) drop-shadow(0 2px 4px rgba(0,0,0,0.1))}
 .card h3{color:var(--green);margin:0 0 16px;font-size:22px;font-weight:700}
 .card p{color:#374151;line-height:1.7;margin:0;font-size:16px}
 
@@ -107,7 +108,7 @@ html,body{margin:0;padding:0;font-family:'Space Grotesk',system-ui,-apple-system
 }
 
 .floating-icons{position:relative;width:100%;height:100%}
-.floating-icon{position:absolute;width:40px;height:40px;filter:drop-shadow(0 4px 8px rgba(0,0,0,0.1))}
+.floating-icon{position:absolute;width:40px;height:40px;filter:brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%) drop-shadow(0 4px 8px rgba(0,0,0,0.1))}
 .brain-float{top:50%;left:50%;transform:translate(-50%, -50%);animation:float 6s ease-in-out infinite}
 
 @keyframes float{
@@ -132,10 +133,10 @@ html,body{margin:0;padding:0;font-family:'Space Grotesk',system-ui,-apple-system
   .grid-3{grid-template-columns:1fr 1fr;gap:20px}
   .hero-icons{gap:15px}
   .icon-container{width:50px;height:50px}
-  .hero-svg{width:28px;height:28px}
+  .hero-svg{width:28px;height:28px;filter:brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%) drop-shadow(0 2px 4px rgba(0,0,0,0.1))}
   .card{padding:24px}
   .card .icon-container{width:45px;height:45px}
-  .card-svg{width:24px;height:24px}
+  .card-svg{width:24px;height:24px;filter:brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%) drop-shadow(0 2px 4px rgba(0,0,0,0.1))}
 }
 @media (max-width:600px){
   .nav{display:none}
@@ -143,8 +144,8 @@ html,body{margin:0;padding:0;font-family:'Space Grotesk',system-ui,-apple-system
   .grid-3{grid-template-columns:1fr;gap:18px}
   .hero-icons{gap:12px}
   .icon-container{width:45px;height:45px}
-  .hero-svg{width:24px;height:24px}
-  .floating-icon{width:35px;height:35px}
+  .hero-svg{width:24px;height:24px;filter:brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%) drop-shadow(0 2px 4px rgba(0,0,0,0.1))}
+  .floating-icon{width:35px;height:35px;filter:brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%) drop-shadow(0 4px 8px rgba(0,0,0,0.1))}
   .page-hero h1{font-size:36px}
   .page-hero p{font-size:18px}
   .card{padding:20px}
