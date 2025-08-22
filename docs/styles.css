@@ -27,7 +27,6 @@ html,body{margin:0;padding:0;font-family:'Space Grotesk',system-ui,-apple-system
 .hero-subtitle{font-size:20px;color:#374151;max-width:50ch;margin:0 0 16px;font-weight:600}
 .hero-main{font-size:18px;color:#374151;max-width:50ch;margin:0 0 24px;line-height:1.6}
 .highlight{color:var(--highlight);font-weight:700}
-.highlight-text{color:var(--pink);font-weight:700;font-size:20px}
 .cta-row{display:flex;gap:12px;margin:18px 0}
 .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:10px;font-weight:700;text-decoration:none;transition:all 0.3s ease}
 .btn-primary{background:var(--green);color:#fff;border:2px solid var(--green)}
@@ -109,9 +108,7 @@ html,body{margin:0;padding:0;font-family:'Space Grotesk',system-ui,-apple-system
 
 .floating-icons{position:relative;width:100%;height:100%}
 .floating-icon{position:absolute;width:40px;height:40px;filter:drop-shadow(0 4px 8px rgba(0,0,0,0.1))}
-.pig-float{top:30px;left:40px;animation:float 6s ease-in-out infinite}
-.brain-float{top:100px;right:50px;animation:float 6s ease-in-out infinite 2s}
-.bear-float{top:160px;left:60px;animation:float 6s ease-in-out infinite 4s}
+.brain-float{top:50%;left:50%;transform:translate(-50%, -50%);animation:float 6s ease-in-out infinite}
 
 @keyframes float{
   0%, 100%{transform:translateY(0px)}
