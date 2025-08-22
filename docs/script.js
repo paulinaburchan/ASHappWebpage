@@ -54,45 +54,6 @@ document.querySelectorAll('.icon-container').forEach(icon => {
   });
 });
 
-// Interactive AI brain icon in header
-const aiBrainHeader = document.querySelector('.ai-brain-header');
-if (aiBrainHeader) {
-  aiBrainHeader.addEventListener('click', function() {
-    // Add a pulse effect on click
-    this.style.animation = 'none';
-    this.offsetHeight; // Trigger reflow
-    this.style.animation = 'aiBrainPulse 0.6s ease-out';
-    
-    // Create a ripple effect
-    const ripple = document.createElement('div');
-    ripple.style.position = 'absolute';
-    ripple.style.width = '100px';
-    ripple.style.height = '100px';
-    ripple.style.background = 'radial-gradient(circle, rgba(255,142,83,0.6) 0%, transparent 70%)';
-    ripple.style.borderRadius = '50%';
-    ripple.style.top = '50%';
-    ripple.style.left = '50%';
-    ripple.style.transform = 'translate(-50%, -50%)';
-    ripple.style.animation = 'rippleEffect 0.6s ease-out';
-    ripple.style.pointerEvents = 'none';
-    
-    this.appendChild(ripple);
-    
-    setTimeout(() => {
-      ripple.remove();
-    }, 600);
-  });
-  
-  // Add some random subtle movements
-  setInterval(() => {
-    if (!aiBrainHeader.matches(':hover')) {
-      const randomX = (Math.random() - 0.5) * 4;
-      const randomY = (Math.random() - 0.5) * 4;
-      aiBrainHeader.style.transform = `translate(${randomX}px, ${randomY}px)`;
-    }
-  }, 3000);
-}
-
 // Inject short web versions of policy/terms from app content if available later.
 // Placeholder text so pages are useful immediately.
 const privacy = document.getElementById('privacy-content');
