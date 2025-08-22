@@ -1,9 +1,57 @@
-document.getElementById('y')?.append(new Date().getFullYear());
+// Update copyright year
+document.getElementById('y').textContent = new Date().getFullYear();
 
-// Mobile nav (basic)
-const toggle = document.querySelector('.nav-toggle');
-toggle?.addEventListener('click', () => {
-  document.querySelector('.nav')?.classList.toggle('open');
+// Mobile navigation toggle
+document.querySelector('.nav-toggle').addEventListener('click', function() {
+  const nav = document.querySelector('.nav');
+  nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+});
+
+// Fun confetti effect for main CTA buttons
+function createConfetti() {
+  const colors = ['#FF8E53', '#FF6B6B', '#2E5946', '#FFB366'];
+  const confettiCount = 50;
+  
+  for (let i = 0; i < confettiCount; i++) {
+    const confetti = document.createElement('div');
+    confetti.style.position = 'fixed';
+    confetti.style.width = '10px';
+    confetti.style.height = '10px';
+    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+    confetti.style.left = Math.random() * window.innerWidth + 'px';
+    confetti.style.top = '-10px';
+    confetti.style.borderRadius = '50%';
+    confetti.style.pointerEvents = 'none';
+    confetti.style.zIndex = '1000';
+    
+    document.body.appendChild(confetti);
+    
+    const animation = confetti.animate([
+      { transform: 'translateY(0px) rotate(0deg)', opacity: 1 },
+      { transform: `translateY(${window.innerHeight + 100}px) rotate(${Math.random() * 360}deg)`, opacity: 0 }
+    ], {
+      duration: Math.random() * 3000 + 2000,
+      easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+    });
+    
+    animation.onfinish = () => confetti.remove();
+  }
+}
+
+// Add confetti to main CTA buttons
+document.querySelectorAll('.btn-primary').forEach(button => {
+  button.addEventListener('click', createConfetti);
+});
+
+// Add some fun hover effects to the animal icons
+document.querySelectorAll('.icon-container').forEach(icon => {
+  icon.addEventListener('mouseenter', function() {
+    this.style.transform = 'translateY(-5px) scale(1.05) rotate(5deg)';
+  });
+  
+  icon.addEventListener('mouseleave', function() {
+    this.style.transform = 'translateY(0) scale(1) rotate(0deg)';
+  });
 });
 
 // Inject short web versions of policy/terms from app content if available later.
