@@ -13,8 +13,8 @@ html,body{margin:0;padding:0;font-family:'Space Grotesk',system-ui,-apple-system
 .container{max-width:1080px;margin:0 auto;padding:0 20px}
 
 /* Beta Banner */
-.beta-banner{background:var(--green);color:#fff;padding:8px 0;text-align:center;font-size:14px;font-weight:500;position:sticky;top:0;z-index:30}
-.beta-text{opacity:0.9}
+.beta-banner{background:rgba(255,255,255,0.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(46,89,70,0.1);padding:12px 0;text-align:center;position:sticky;top:0;z-index:30}
+.beta-text{color:var(--green);font-size:13px;font-weight:600;letter-spacing:0.3px;text-transform:uppercase}
 
 .site-header{position:relative;z-index:20;background:var(--white);border-bottom:1px solid #e5e7eb}
 .header-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
@@ -72,6 +72,9 @@ html,body{margin:0;padding:0;font-family:'Space Grotesk',system-ui,-apple-system
 .section{padding:60px 0;position:relative}
 .section::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background-image:radial-gradient(circle at 20% 80%, rgba(255,142,83,0.03) 0%, transparent 50%),radial-gradient(circle at 80% 20%, rgba(255,107,107,0.03) 0%, transparent 50%);pointer-events:none}
 .section.alt{background:#fff}
+
+/* Current Features Section - Special background */
+#current-features{background:linear-gradient(135deg, rgba(46,89,70,0.03) 0%, rgba(255,142,83,0.03) 100%)}
 .section.alt.pig-section{padding-top:15px;background:#fff !important}
 .section.alt.cta-section .btn{margin-top:20px}
 .center{text-align:center}
@@ -105,7 +108,7 @@ html,body{margin:0;padding:0;font-family:'Space Grotesk',system-ui,-apple-system
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
 
 /* Creator Story Section */
-.creator-story{background:linear-gradient(135deg, rgba(255,142,83,0.05) 0%, rgba(255,107,107,0.05) 100%)}
+.creator-story{background:var(--white)}
 .creator-content{display:grid;grid-template-columns:2fr 1fr;gap:40px;align-items:center}
 .creator-text h2{font-size:36px;line-height:1.2;margin:0 0 24px;color:var(--green)}
 .creator-story-text{font-size:18px;color:#374151;line-height:1.7;margin:0 0 20px}
@@ -118,7 +121,7 @@ html,body{margin:0;padding:0;font-family:'Space Grotesk',system-ui,-apple-system
 .section-subtitle{font-size:18px;color:var(--muted);text-align:center;margin:0 0 40px;font-weight:500}
 
 /* Coming Soon Section */
-.coming-soon{background:linear-gradient(135deg, rgba(46,89,70,0.05) 0%, rgba(255,142,83,0.05) 100%)}
+.coming-soon{background:linear-gradient(135deg, rgba(46,89,70,0.05) 0%, rgba(255,142,83,0.05) 100%);text-align:center}
 .coming-soon-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:40px}
 .coming-soon-item{background:#fff;border-radius:20px;padding:28px;box-shadow:0 8px 25px rgba(0,0,0,.08);border:2px solid transparent;transition:all 0.4s ease;position:relative;overflow:hidden;text-align:center}
 .coming-soon-item:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(0,0,0,.12);border-color:var(--highlight-light)}
