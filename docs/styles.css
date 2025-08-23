@@ -11,6 +11,14 @@
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;font-family:'Space Grotesk',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:var(--bg)}
 .container{max-width:1080px;margin:0 auto;padding:0 20px}
+
+/* Beta Banner */
+.beta-banner{background:linear-gradient(135deg, var(--highlight), var(--pink));color:#fff;padding:12px 0;text-align:center;position:relative;overflow:hidden}
+.beta-banner::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);animation:shimmer 3s ease-in-out infinite}
+.beta-badge{background:rgba(255,255,255,0.2);padding:6px 12px;border-radius:20px;font-size:14px;font-weight:700;margin-right:12px;display:inline-block;backdrop-filter:blur(10px)}
+.beta-text{font-size:16px;font-weight:600}
+@keyframes shimmer{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+
 .site-header{position:relative;z-index:20;background:var(--white);border-bottom:1px solid #e5e7eb}
 .header-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
 .brand{font-family:'Righteous', cursive;font-size:26px;text-decoration:none}
@@ -98,6 +106,44 @@ html,body{margin:0;padding:0;font-family:'Space Grotesk',system-ui,-apple-system
 }
 
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+
+/* Creator Story Section */
+.creator-story{background:linear-gradient(135deg, rgba(255,142,83,0.05) 0%, rgba(255,107,107,0.05) 100%)}
+.creator-content{display:grid;grid-template-columns:2fr 1fr;gap:40px;align-items:center}
+.creator-text h2{font-size:36px;line-height:1.2;margin:0 0 24px;color:var(--green)}
+.creator-story-text{font-size:18px;color:#374151;line-height:1.7;margin:0 0 20px}
+.creator-visual{display:flex;justify-content:center;align-items:center}
+.creator-icon{width:120px;height:120px;background:linear-gradient(135deg, var(--highlight-light), var(--pink));border-radius:24px;box-shadow:0 12px 30px rgba(255,142,83,0.3);display:flex;align-items:center;justify-content:center;animation:creatorIconFloat 4s ease-in-out infinite}
+.creator-svg{width:60px;height:60px;filter:brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%)}
+@keyframes creatorIconFloat{0%, 100%{transform:translateY(0px) rotate(0deg)}50%{transform:translateY(-10px) rotate(5deg)}}
+
+/* Section Subtitles */
+.section-subtitle{font-size:18px;color:var(--muted);text-align:center;margin:0 0 40px;font-weight:500}
+
+/* Coming Soon Section */
+.coming-soon{background:linear-gradient(135deg, rgba(46,89,70,0.05) 0%, rgba(255,142,83,0.05) 100%)}
+.coming-soon-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:40px}
+.coming-soon-item{background:#fff;border-radius:20px;padding:28px;box-shadow:0 8px 25px rgba(0,0,0,.08);border:2px solid transparent;transition:all 0.4s ease;position:relative;overflow:hidden;text-align:center}
+.coming-soon-item:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(0,0,0,.12);border-color:var(--highlight-light)}
+.coming-soon-item:hover::before{opacity:1}
+.coming-soon-item::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg, var(--highlight), var(--pink));opacity:0;transition:opacity 0.3s ease}
+.coming-soon-icon{font-size:48px;margin:0 auto 20px;display:block;animation:iconBounce 2s ease-in-out infinite}
+.coming-soon-item h3{color:var(--green);margin:0 0 16px;font-size:22px;font-weight:700}
+.coming-soon-item p{color:#374151;line-height:1.7;margin:0;font-size:16px}
+
+/* Feedback Section */
+.feedback-section{background:linear-gradient(135deg, rgba(255,142,83,0.08) 0%, rgba(255,107,107,0.08) 100%)}
+.feedback-text{font-size:20px;color:#374151;max-width:70ch;margin:0 auto 32px;line-height:1.6}
+.feedback-features{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:32px 0}
+.feedback-item{text-align:center;padding:24px;background:rgba(255,255,255,0.7);border-radius:16px;backdrop-filter:blur(10px)}
+.feedback-item h3{color:var(--green);margin:0 0 12px;font-size:20px;font-weight:700}
+.feedback-item p{color:#374151;line-height:1.6;margin:0;font-size:16px}
+.feedback-cta{font-size:18px;color:var(--green);margin:32px 0 0;font-weight:600}
+
+/* Beta Notice */
+.beta-notice{background:rgba(255,142,83,0.1);border:2px solid var(--highlight-light);border-radius:16px;padding:16px;margin:24px 0;display:inline-block}
+.beta-notice p{margin:0;color:var(--green);font-weight:600}
+
 .checklist{list-style:none;padding:0;margin:12px 0 0}
 .checklist li{margin:12px 0;padding-left:28px;position:relative;font-size:16px;line-height:1.5;animation:listItemEntrance 0.5s ease-out forwards;opacity:0;transform:translateX(-20px)}
 .checklist li:nth-child(1){animation-delay:0.1s}
@@ -157,6 +203,9 @@ html,body{margin:0;padding:0;font-family:'Space Grotesk',system-ui,-apple-system
 @media (max-width:900px){
   .hero-inner{grid-template-columns:1fr}
   .grid-3{grid-template-columns:1fr 1fr;gap:20px}
+  .coming-soon-grid{grid-template-columns:1fr;gap:20px}
+  .feedback-features{grid-template-columns:1fr;gap:20px}
+  .creator-content{grid-template-columns:1fr;gap:30px;text-align:center}
   .hero-icons{gap:15px}
   .icon-container{width:50px;height:50px}
   .hero-svg{width:28px;height:28px;filter:brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%) drop-shadow(0 2px 4px rgba(0,0,0,0.1))}
@@ -168,6 +217,8 @@ html,body{margin:0;padding:0;font-family:'Space Grotesk',system-ui,-apple-system
   .nav{display:none}
   .nav-toggle{display:block}
   .grid-3{grid-template-columns:1fr;gap:18px}
+  .coming-soon-grid{grid-template-columns:1fr;gap:18px}
+  .feedback-features{grid-template-columns:1fr;gap:18px}
   .hero-icons{gap:12px}
   .icon-container{width:45px;height:45px}
   .hero-svg{width:24px;height:24px;filter:brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%) drop-shadow(0 2px 4px rgba(0,0,0,0.1))}
@@ -175,6 +226,10 @@ html,body{margin:0;padding:0;font-family:'Space Grotesk',system-ui,-apple-system
   .page-hero h1{font-size:36px}
   .page-hero p{font-size:18px}
   .card{padding:20px}
+  .coming-soon-item{padding:20px}
+  .feedback-item{padding:20px}
+  .creator-text h2{font-size:28px}
+  .creator-story-text{font-size:16px}
 }
 
 
