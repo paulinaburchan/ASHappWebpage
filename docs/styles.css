@@ -74,7 +74,7 @@ html,body{margin:0;padding:0;font-family:'Space Grotesk',system-ui,-apple-system
 .section.alt{background:#fff}
 
 /* Current Features Section - Special background */
-#current-features{background:linear-gradient(135deg, rgba(46,89,70,0.03) 0%, rgba(255,142,83,0.03) 100%)}
+#current-features{background:linear-gradient(135deg, rgba(46,89,70,0.03) 0%, rgba(255,142,83,0.03) 100%);text-align:center}
 .section.alt.pig-section{padding-top:15px;background:#fff !important}
 .section.alt.cta-section .btn{margin-top:20px}
 .center{text-align:center}
