@@ -13,8 +13,8 @@ html,body{margin:0;padding:0;font-family:'Space Grotesk',system-ui,-apple-system
 .container{max-width:1080px;margin:0 auto;padding:0 20px}
 
 /* Beta Banner */
-.beta-banner{background:rgba(255,255,255,0.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(46,89,70,0.1);padding:12px 0;text-align:center;position:sticky;top:0;z-index:30}
-.beta-text{color:var(--green);font-size:13px;font-weight:600;letter-spacing:0.3px;text-transform:uppercase}
+.beta-banner{background:linear-gradient(135deg, rgba(46,89,70,0.08) 0%, rgba(255,142,83,0.08) 100%);backdrop-filter:blur(20px);border-bottom:2px solid rgba(46,89,70,0.15);padding:16px 0;text-align:center;position:sticky;top:0;z-index:30}
+.beta-text{color:var(--green);font-size:15px;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;font-family:'Righteous', cursive}
 
 .site-header{position:relative;z-index:20;background:var(--white);border-bottom:1px solid #e5e7eb}
 .header-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
