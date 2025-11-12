@@ -43,13 +43,22 @@
       <section class="section">
         <div class="container doc">
           <div id="privacy-content"></div>
-          <h2 id="camera-screenshots">Camera and Screenshots</h2>
+          <h2 id="camera-screenshots">Camera, Screenshots, and Photo Library Access</h2>
+          
+          <h3>Camera and Screenshots for Issue Reporting</h3>
           <p><strong>Purpose:</strong> We only use the camera or accept screenshots when you report an issue in the app, so you can attach a screenshot to help us diagnose the problem. We do not perform background capture or biometric/face recognition.</p>
           <p><strong>Data Collected:</strong> The screenshot or image you choose to attach and any optional text you provide in the report.</p>
-          <p><strong>Storage:</strong> Images remain on your device unless you explicitly submit them with the report. If submitted, they are stored securely on our servers for support purposes only.</p>
-          <p><strong>Sharing:</strong> Not sold. Not shared with third parties except trusted processors (e.g., cloud storage/helpdesk) under data processing agreements.</p>
+          <p><strong>Storage:</strong> Images remain on your device unless you explicitly submit them with the report. If submitted, they are stored securely on our AWS S3 servers for support purposes only.</p>
+          <p><strong>Sharing:</strong> Not sold. Not shared with third parties except trusted processors (AWS for storage) under data processing agreements.</p>
           <p><strong>Retention:</strong> Kept only until the reported issue is resolved or until you delete your account—whichever happens first.</p>
           <p><strong>Optional:</strong> Granting camera permission or attaching screenshots is optional. The app works without this permission; you can deny it and still use ASHapp.</p>
+          
+          <h3>Photo Library Access for OCR (Text Recognition)</h3>
+          <p><strong>Purpose:</strong> We request photo library access when you use the "Import from Notes" feature to select images containing text that you want to convert into learning materials.</p>
+          <p><strong>Data Collected:</strong> Only the images you explicitly select from your photo library.</p>
+          <p><strong>Processing:</strong> Selected images are temporarily sent to Microsoft Azure Document Intelligence for text extraction (OCR). Only image content is sent—no personal identifiers like email or user ID. Azure does not retain your images after processing.</p>
+          <p><strong>Storage:</strong> The extracted text (not the images) is saved in your learning collections on AWS infrastructure. Images themselves are not stored in our systems.</p>
+          <p><strong>Optional:</strong> This feature is entirely optional. You can use ASHapp without granting photo library access.</p>
           <p class="mt-24">Contact: <a href="mailto:privacy@ashapp.pl">privacy@ashapp.pl</a></p>
         </div>
       </section>

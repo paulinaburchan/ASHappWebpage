@@ -1,0 +1,13 @@
+# robots.txt for https://ashapp.pl
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://ashapp.pl/sitemap.xml
+
+# Crawl-delay (optional, helps prevent overloading your server)
+Crawl-delay: 1
+
+# Block specific paths if needed (currently allowing all)
+# Disallow: /admin/
+

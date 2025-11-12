@@ -102,7 +102,8 @@ if (privacy) {
     <div class="doc-section">
       <h2>5. Data Storage and Processing</h2>
       <p><strong>AWS Cloud Services:</strong> Your learning materials, account data, and app data are stored on Amazon Web Services (AWS) cloud infrastructure located in the European Union (EU) to ensure GDPR compliance.</p>
-      <p><strong>OpenAI GPT Processing:</strong> When you use AI-generated features, your learning materials may be processed by OpenAI's GPT service. This processing is necessary to provide AI-powered learning assistance and collection generation.</p>
+      <p><strong>OpenAI AI Processing:</strong> When you use AI-generated features, your content may be processed by OpenAI services. This includes: (1) GPT-4 for generating learning collections and processing text, and (2) DALL-E 3 for generating images. All AI-generated content is filtered through OpenAI's content moderation system to prevent inappropriate, violent, or sexual content. DALL-E 3 includes built-in safety filters that automatically reject prompts violating content policies. Images are stored in our secure AWS S3 storage. We do not use your data to train OpenAI's models.</p>
+      <p><strong>Microsoft Azure Document Intelligence:</strong> When you use the OCR (text recognition) feature to import notes from images, your uploaded images are temporarily processed by Microsoft Azure Document Intelligence to extract text. Only the image content is sent—no personal identifiers (email, user ID, or account information) are included. Once text extraction is complete, Azure does not retain your images. The extracted text is returned to our system for creating your learning materials.</p>
       <p><strong>Data Security:</strong> All data is encrypted in transit using TLS (Transport Layer Security) and at rest using AES-256 encryption. We follow AWS security standards and industry best practices.</p>
     </div>
 
@@ -111,7 +112,8 @@ if (privacy) {
       <p>We use the following third-party services:</p>
       <ul>
         <li><strong>Amazon Web Services (AWS):</strong> For cloud hosting, data storage, and infrastructure services</li>
-        <li><strong>OpenAI:</strong> For AI-powered learning features and content generation</li>
+        <li><strong>OpenAI:</strong> For AI-powered features including GPT-4 (text generation and learning collections) and DALL-E 3 (image generation). All content is moderated for safety and appropriateness. OpenAI does not use your data to train their models.</li>
+        <li><strong>Microsoft Azure:</strong> For OCR (Optical Character Recognition) to extract text from images you upload. Only image content is processed; no personal information is sent. Azure does not retain your images after processing.</li>
       </ul>
       <p>All third-party services are bound by data processing agreements and comply with GDPR requirements.</p>
     </div>
@@ -219,7 +221,8 @@ if (terms) {
       <p>You retain ownership of all content you create in ASHapp. By using our services, you:</p>
       <ul>
         <li><strong>Grant License:</strong> Grant us a license to store, process, and display your content to provide our services</li>
-        <li><strong>AI Processing:</strong> Consent to your learning materials being processed by OpenAI's GPT service for AI-generated features</li>
+        <li><strong>AI Processing:</strong> Consent to your learning materials being processed by OpenAI's services (GPT-4 and DALL-E 3) for AI-generated features, with content moderation filtering</li>
+        <li><strong>OCR Processing:</strong> Consent to uploaded images being temporarily processed by Microsoft Azure Document Intelligence for text extraction (no personal identifiers sent)</li>
         <li><strong>Data Storage:</strong> Consent to your content being stored on AWS cloud infrastructure</li>
         <li><strong>Content Responsibility:</strong> Are responsible for ensuring your content doesn't violate any laws or third-party rights</li>
         <li><strong>Content Removal:</strong> Can delete your content at any time, which will be permanently removed from our systems</li>
@@ -228,12 +231,14 @@ if (terms) {
 
     <div class="doc-section">
       <h2>6. AI-Powered Features</h2>
-      <p>ASHapp uses OpenAI's GPT technology to provide AI-generated learning features:</p>
+      <p>ASHapp uses AI services from OpenAI and Microsoft Azure to provide enhanced learning features:</p>
       <ul>
-        <li><strong>AI Processing:</strong> When you use AI features, your learning materials are processed by OpenAI's GPT service</li>
-        <li><strong>Data Sharing:</strong> Your content is shared with OpenAI solely for the purpose of providing AI-generated learning assistance</li>
-        <li><strong>OpenAI Terms:</strong> Use of AI features is also subject to OpenAI's terms of service and privacy policy</li>
+        <li><strong>OpenAI Processing:</strong> When you use AI features, your learning materials are processed by OpenAI's services (GPT-4 for text generation and DALL-E 3 for image generation). All content is filtered through content moderation systems to prevent inappropriate content.</li>
+        <li><strong>Azure OCR:</strong> When you use the OCR feature to import notes from images, your images are temporarily processed by Microsoft Azure Document Intelligence to extract text. No personal identifiers are sent, and Azure does not retain your images.</li>
+        <li><strong>Data Sharing:</strong> Your content is shared with these services solely for providing AI-generated learning assistance and text extraction</li>
+        <li><strong>Third-Party Terms:</strong> Use of AI features is also subject to OpenAI's and Microsoft's terms of service and privacy policies</li>
         <li><strong>AI Limitations:</strong> AI-generated content is for educational purposes only and should be verified for accuracy</li>
+        <li><strong>No Training Use:</strong> Neither OpenAI nor Microsoft Azure uses your data to train their models</li>
       </ul>
     </div>
 
