@@ -71,7 +71,7 @@ if (privacy) {
       <p>We collect the following types of personal data:</p>
       <ul>
         <li><strong>Account Information:</strong> Email address, user ID, and authentication tokens</li>
-        <li><strong>User-Generated Content:</strong> Learning materials, concepts, collections, and study progress you create</li>
+        <li><strong>User-Generated Content:</strong> Learning materials, concepts, collections, study progress you create, images you upload or send to us, and AI-generated images created through our services</li>
         <li><strong>Usage Data:</strong> How you interact with the app, learning progress, and feature usage</li>
         <li><strong>Technical Data:</strong> Device information, app version, and performance metrics</li>
       </ul>
@@ -82,7 +82,8 @@ if (privacy) {
       <p>We use your personal data for the following purposes:</p>
       <ul>
         <li><strong>Service Provision:</strong> To provide and maintain the ASHapp learning platform</li>
-        <li><strong>AI Processing:</strong> To process your learning materials through OpenAI's GPT service for AI-generated collections and learning assistance</li>
+        <li><strong>AI Processing:</strong> To process your learning materials through OpenAI's GPT service for AI-generated collections and learning assistance, and to generate images through OpenAI's DALL-E 3 service for visual learning aids</li>
+        <li><strong>Image Processing:</strong> To process images you upload (we assume you have the right to use these images) through Microsoft Azure Document Intelligence for OCR (Optical Character Recognition) to extract text and create learning materials from your notes</li>
         <li><strong>Data Storage:</strong> To securely store your learning materials and progress on AWS cloud infrastructure</li>
         <li><strong>Account Management:</strong> To manage your account, subscriptions, and preferences</li>
         <li><strong>Improvement:</strong> To improve our services and develop new features</li>
@@ -120,12 +121,12 @@ if (privacy) {
 
     <div class="doc-section">
       <h2>7. Data Retention</h2>
-      <p>We retain your personal data for as long as your account is active or as needed to provide services. When you delete your account, all your data is permanently removed from our systems within 30 days.</p>
+      <p>We retain your personal data for as long as your account is active or as needed to provide services. When you delete your account, your account, learning materials, and uploaded images are deleted immediately and permanently. Only system logs are retained for up to 90 days.</p>
       <ul>
-        <li><strong>Learning Materials:</strong> Your user-generated content is retained until account deletion</li>
-        <li><strong>Account Data:</strong> Retained until account deletion</li>
+        <li><strong>Learning Materials:</strong> Your user-generated content (collections, concepts, images) is deleted immediately upon account deletion</li>
+        <li><strong>Account Data:</strong> Your account and all associated data are deleted immediately upon account deletion</li>
         <li><strong>Verification Codes:</strong> 5 minutes (for security purposes)</li>
-        <li><strong>System Logs:</strong> 30 days (for security and debugging)</li>
+        <li><strong>System Logs:</strong> 90 days (for security and debugging) - these are the only data retained after account deletion</li>
         <li><strong>Usage Analytics:</strong> Aggregated and anonymized after 2 years</li>
       </ul>
     </div>
@@ -187,26 +188,15 @@ if (terms) {
       <p>ASHapp is a mobile learning application that allows users to:</p>
       <ul>
         <li>Create and manage learning collections and concepts</li>
-        <li>Use AI-powered features to generate learning content</li>
+        <li>Use AI-powered features to generate learning content (text via GPT-4 and images via DALL-E 3)</li>
+        <li>Import notes from images using OCR (Optical Character Recognition)</li>
         <li>Track learning progress and participate in challenges</li>
         <li>Access different subscription tiers with varying features</li>
       </ul>
     </div>
 
     <div class="doc-section">
-      <h2>3. Service Description</h2>
-      <p>ASHapp is a learning platform that allows users to create, organize, and study learning materials. Our services include:</p>
-      <ul>
-        <li><strong>Learning Management:</strong> Create and organize learning collections and concepts</li>
-        <li><strong>AI-Powered Features:</strong> AI-generated learning collections using OpenAI's GPT technology</li>
-        <li><strong>Progress Tracking:</strong> Monitor your learning progress and set personal goals</li>
-        <li><strong>Cloud Storage:</strong> Secure storage of your learning materials on AWS cloud infrastructure</li>
-        <li><strong>Sharing Features:</strong> Share learning collections with other users (Premium feature)</li>
-      </ul>
-    </div>
-
-    <div class="doc-section">
-      <h2>4. User Accounts</h2>
+      <h2>3. User Accounts</h2>
       <p>To use ASHapp, you must create an account by providing a valid email address. You are responsible for:</p>
       <ul>
         <li><strong>Account Security:</strong> Keeping your login credentials secure and confidential</li>
@@ -217,7 +207,7 @@ if (terms) {
     </div>
 
     <div class="doc-section">
-      <h2>5. User-Generated Content</h2>
+      <h2>4. User-Generated Content</h2>
       <p>You retain ownership of all content you create in ASHapp. By using our services, you:</p>
       <ul>
         <li><strong>Grant License:</strong> Grant us a license to store, process, and display your content to provide our services</li>
@@ -230,7 +220,7 @@ if (terms) {
     </div>
 
     <div class="doc-section">
-      <h2>6. AI-Powered Features</h2>
+      <h2>5. AI-Powered Features</h2>
       <p>ASHapp uses AI services from OpenAI and Microsoft Azure to provide enhanced learning features:</p>
       <ul>
         <li><strong>OpenAI Processing:</strong> When you use AI features, your learning materials are processed by OpenAI's services (GPT-4 for text generation and DALL-E 3 for image generation). All content is filtered through content moderation systems to prevent inappropriate content.</li>
@@ -243,7 +233,7 @@ if (terms) {
     </div>
 
     <div class="doc-section">
-      <h2>7. Data Storage and Security</h2>
+      <h2>6. Data Storage and Security</h2>
       <p>Your data is stored and processed using industry-standard security measures:</p>
       <ul>
         <li><strong>AWS Infrastructure:</strong> All data is stored on Amazon Web Services (AWS) cloud infrastructure</li>
@@ -255,7 +245,7 @@ if (terms) {
     </div>
 
     <div class="doc-section">
-      <h2>8. Acceptable Use</h2>
+      <h2>7. Acceptable Use</h2>
       <p>You agree not to use ASHapp to:</p>
       <ul>
         <li><strong>Violate Laws:</strong> Use the service for any illegal or unauthorized purpose</li>
@@ -268,7 +258,7 @@ if (terms) {
     </div>
 
     <div class="doc-section">
-      <h2>9. Subscriptions and Billing</h2>
+      <h2>8. Subscriptions and Billing</h2>
       <ul>
         <li>Subscription plans and one-time purchases are offered at the prices and billing periods shown in the app and on the store listing at the time of purchase. Prices may change; if they do, we will notify existing subscribers in advance and changes will apply at the next billing cycle.</li>
         <li>Billing, renewals, cancellations, and refunds are handled by the app store (e.g., Google Play). You can manage or cancel your subscription at any time in your store account settings; cancellation takes effect at the end of the current billing period.</li>
@@ -279,14 +269,14 @@ if (terms) {
     </div>
 
     <div class="doc-section">
-      <h2>10. Intellectual Property</h2>
-      <h3>10.1 Our Rights</h3>
+      <h2>9. Intellectual Property</h2>
+      <h3>9.1 Our Rights</h3>
       <ul>
         <li>The App and its original content are owned by ASHapp</li>
         <li>Our trademarks, logos, and branding are protected</li>
       </ul>
       
-      <h3>10.2 Third-Party Rights</h3>
+      <h3>9.2 Third-Party Rights</h3>
       <ul>
         <li>The App may include third-party content and services</li>
         <li>Third-party content is subject to their respective licenses</li>
@@ -294,7 +284,7 @@ if (terms) {
     </div>
 
     <div class="doc-section">
-      <h2>11. Privacy and Data</h2>
+      <h2>10. Privacy and Data</h2>
       <ul>
         <li>Your privacy is important to us</li>
         <li>Our Privacy Policy explains how we collect and use your data</li>
@@ -304,15 +294,15 @@ if (terms) {
     </div>
 
     <div class="doc-section">
-      <h2>12. Disclaimers and Limitations</h2>
-      <h3>12.1 Service Availability</h3>
+      <h2>11. Disclaimers and Limitations</h2>
+      <h3>11.1 Service Availability</h3>
       <ul>
         <li>The App is provided "as is" without warranties</li>
         <li>We do not guarantee uninterrupted or error-free service</li>
         <li>We may modify or discontinue features at any time</li>
       </ul>
       
-      <h3>12.2 Limitation of Liability</h3>
+      <h3>11.2 Limitation of Liability</h3>
       <ul>
         <li>We are not liable for indirect, incidental, or consequential damages</li>
         <li>Our total liability is limited to the amount you paid for the service</li>
@@ -320,14 +310,14 @@ if (terms) {
     </div>
 
     <div class="doc-section">
-      <h2>13. Termination</h2>
-      <h3>13.1 Termination by You</h3>
+      <h2>12. Termination</h2>
+      <h3>12.1 Termination by You</h3>
       <ul>
         <li>You may delete your account at any time</li>
         <li>Account deletion is permanent and irreversible</li>
       </ul>
       
-      <h3>13.2 Termination by Us</h3>
+      <h3>12.2 Termination by Us</h3>
       <ul>
         <li>We may terminate or suspend your account for Terms violations</li>
         <li>We will provide reasonable notice unless immediate action is required</li>
@@ -335,7 +325,7 @@ if (terms) {
     </div>
 
     <div class="doc-section">
-      <h2>14. Changes to Terms</h2>
+      <h2>13. Changes to Terms</h2>
       <ul>
         <li>We may update these Terms from time to time</li>
         <li>We will notify you of significant changes</li>
@@ -344,7 +334,7 @@ if (terms) {
     </div>
 
     <div class="doc-section">
-      <h2>15. Governing Law</h2>
+      <h2>14. Governing Law</h2>
       <ul>
         <li>These Terms are governed by Polish law</li>
         <li>Any disputes will be resolved in Polish courts</li>
@@ -353,13 +343,13 @@ if (terms) {
     </div>
 
     <div class="doc-section">
-      <h2>16. Contact Information</h2>
+      <h2>15. Contact Information</h2>
       <p>For questions about these Terms, please contact us:</p>
       <p><a href="mailto:privacy@ashapp.pl">privacy@ashapp.pl</a></p>
     </div>
 
     <div class="doc-section">
-      <h2>17. Severability</h2>
+      <h2>16. Severability</h2>
       <p>If any provision of these Terms is found to be unenforceable, the remaining provisions will continue in full force and effect.</p>
     </div>
   `;

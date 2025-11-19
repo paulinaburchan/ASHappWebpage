@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ASHapp – Delete Your Account</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/images/pig.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Beta Banner -->
+    <div class="beta-banner">
+      <div class="container">
+        <span class="beta-text">ASHapp is currently in beta test</span>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="./">
+          <span class="brand-ash">ASH</span><span class="brand-app">app</span>
+        </a>
+        <nav class="nav">
+          <a href="./mnemonics">Mnemonics</a>
+          <a href="./privacy">Privacy</a>
+          <a href="./terms">Terms</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Open menu">☰</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero privacy-hero">
+        <div class="container center">
+          <h1>Delete Your ASHapp Account</h1>
+          <p>Request permanent deletion of your account and all associated data</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container doc">
+          <div class="doc-section">
+            <h2>How to Delete Your Account</h2>
+            <p>To permanently delete your <strong>ASHapp</strong> account and all associated data, please follow these steps:</p>
+            
+            <ol style="line-height: 1.8; margin: 20px 0; padding-left: 20px;">
+              <li><strong>Open the ASHapp mobile application</strong> on your device</li>
+              <li><strong>Navigate to your Profile</strong> by tapping the profile icon in the top right corner of the home screen</li>
+              <li><strong>Scroll down</strong> to find the "Delete Account" option (shown in red at the bottom of the menu)</li>
+              <li><strong>Confirm your decision</strong> - You will be asked to confirm twice to ensure you want to proceed</li>
+              <li><strong>Complete the deletion</strong> - Your account and all data will be permanently deleted</li>
+            </ol>
+
+            <div style="background: #FEF2F2; border-left: 4px solid #EF4444; padding: 16px; margin: 24px 0; border-radius: 8px;">
+              <p style="margin: 0; color: #DC2626; font-weight: 600;">⚠️ Warning: This action cannot be undone. All your data will be permanently deleted.</p>
+            </div>
+          </div>
+
+          <div class="doc-section">
+            <h2>What Data Will Be Deleted</h2>
+            <p>When you delete your <strong>ASHapp</strong> account, the following data will be permanently removed:</p>
+            <ul style="line-height: 1.8; margin: 20px 0; padding-left: 20px;">
+              <li><strong>Account Information:</strong> Email address, user ID, and authentication tokens</li>
+              <li><strong>Learning Materials:</strong> All your collections, concepts, flashcards, and study progress</li>
+              <li><strong>User-Generated Content:</strong> All images you uploaded, AI-generated images, notes, and custom content</li>
+              <li><strong>Learning Data:</strong> Streak data, personal goals, learning statistics, and progress tracking</li>
+              <li><strong>Subscription Information:</strong> Subscription type and billing data</li>
+              <li><strong>Notifications:</strong> All notifications and shared collection data</li>
+              <li><strong>Stored Images:</strong> All images stored in our AWS S3 storage associated with your account</li>
+              <li><strong>App Preferences:</strong> All settings and preferences you configured</li>
+            </ul>
+          </div>
+
+          <div class="doc-section">
+            <h2>Data Retention Period</h2>
+            <p>When you delete your <strong>ASHapp</strong> account:</p>
+            <ul style="line-height: 1.8; margin: 20px 0; padding-left: 20px;">
+              <li><strong>Immediate and Permanent Deletion:</strong> Your account and all associated data (collections, concepts, images, user data) are deleted immediately and permanently upon confirmation</li>
+              <li><strong>No Backup Retention:</strong> We do not retain backups of deleted account data. Once deleted, your data cannot be recovered</li>
+              <li><strong>System Logs:</strong> AWS CloudWatch system logs are automatically deleted after 90 days. These logs contain technical information (request IDs, timestamps, error codes) but do not contain your personal data, account information, email addresses, or any content you created.</li>
+            </ul>
+          </div>
+
+          <div class="doc-section">
+            <h2>What Data Is Not Deleted</h2>
+            <p>The following data may be retained for legal or operational purposes:</p>
+            <ul style="line-height: 1.8; margin: 20px 0; padding-left: 20px;">
+              <li><strong>Aggregated Analytics:</strong> Anonymized usage statistics that cannot be linked to your account or identify you personally</li>
+              <li><strong>Legal Records:</strong> Any data required to be retained by law or for legal compliance (if applicable)</li>
+            </ul>
+            <p style="margin-top: 16px; color: var(--muted); font-size: 14px;">
+              Note: AWS CloudWatch system logs are automatically deleted after 90 days. These logs contain technical metadata (timestamps, request IDs, error codes) but do not contain your personal data, account information, email addresses, or any content you created.
+            </p>
+          </div>
+
+          <div class="doc-section">
+            <h2>Alternative Method</h2>
+            <p>If you are unable to access the app or prefer to request deletion via email, you can contact us at:</p>
+            <p style="margin: 16px 0;">
+              <strong>Email:</strong> <a href="mailto:privacy@ashapp.pl" style="color: var(--green); text-decoration: none; font-weight: 600;">privacy@ashapp.pl</a>
+            </p>
+            <p>Please include your registered email address in your request. We will process your deletion request within 7 business days.</p>
+          </div>
+
+          <div class="doc-section">
+            <h2>Need Help?</h2>
+            <p>If you have questions about account deletion or need assistance, please contact us:</p>
+            <p style="margin: 16px 0;">
+              <strong>Email:</strong> <a href="mailto:privacy@ashapp.pl" style="color: var(--green); text-decoration: none; font-weight: 600;">privacy@ashapp.pl</a>
+            </p>
+            <p>We will respond to your inquiry within 30 days.</p>
+          </div>
+
+          <div class="doc-section" style="margin-top: 40px; padding-top: 24px; border-top: 2px solid #e5e7eb;">
+            <p style="color: var(--muted); font-size: 14px;">
+              <strong>ASHapp</strong> is committed to protecting your privacy and data rights. 
+              For more information, please review our <a href="./privacy" style="color: var(--green);">Privacy Policy</a> 
+              and <a href="./terms" style="color: var(--green);">Terms of Service</a>.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <span class="brand-ash">ASH</span><span class="brand-app">app</span>
+        </div>
+        <nav class="footer-nav">
+          <a href="./mnemonics">Mnemonics</a>
+          <a href="./privacy">Privacy Policy</a>
+          <a href="./terms">Terms of Service</a>
+        </nav>
+        <div class="footer-copy">© <span id="y"></span> ASHapp</div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+
