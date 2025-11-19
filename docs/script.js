@@ -129,6 +129,7 @@ if (privacy) {
         <li><strong>System Logs:</strong> 90 days (for security and debugging) - these are the only data retained after account deletion</li>
         <li><strong>Usage Analytics:</strong> Aggregated and anonymized after 2 years</li>
       </ul>
+      <p style="margin-top: 16px;"><a href="./delete-account" style="color: var(--green); font-weight: 600;">→ Delete your account</a></p>
     </div>
 
     <div class="doc-section">
@@ -137,9 +138,9 @@ if (privacy) {
       <ul>
         <li><strong>Access:</strong> Request a copy of your personal data</li>
         <li><strong>Rectification:</strong> Correct inaccurate information</li>
-        <li><strong>Erasure:</strong> Delete your account and all associated data</li>
         <li><strong>Portability:</strong> Export your data in a machine-readable format</li>
         <li><strong>Objection:</strong> Object to certain types of processing</li>
+        <li><strong>Deletion:</strong> Request deletion of your account and all associated data. <a href="./delete-account">Learn how to delete your account</a></li>
       </ul>
     </div>
 
