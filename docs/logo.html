@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ASHapp Logo - BIMI</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      .logo-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 60px 20px;
+      }
+      .logo-section {
+        background: #fff;
+        border-radius: 20px;
+        padding: 40px;
+        margin-bottom: 40px;
+        box-shadow: 0 8px 25px rgba(0,0,0,.08);
+        text-align: center;
+      }
+      .logo-section h2 {
+        color: var(--green);
+        font-size: 24px;
+        margin: 0 0 20px 0;
+        font-weight: 700;
+      }
+      .logo-display {
+        margin: 30px 0;
+        padding: 30px;
+        background: var(--bg);
+        border-radius: 16px;
+        border: 2px solid #e5e7eb;
+      }
+      .logo-display img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+      .logo-url {
+        margin-top: 20px;
+        padding: 16px;
+        background: #f8fafb;
+        border-radius: 8px;
+        border: 1px solid #e5e7eb;
+        word-break: break-all;
+        font-family: 'Courier New', monospace;
+        font-size: 14px;
+        color: var(--green);
+      }
+      .logo-url-label {
+        font-size: 12px;
+        color: var(--muted);
+        margin-bottom: 8px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .page-header {
+        text-align: center;
+        padding: 40px 20px;
+        background: linear-gradient(135deg, rgba(46,89,70,0.05) 0%, rgba(255,142,83,0.05) 100%);
+      }
+      .page-header h1 {
+        color: var(--green);
+        font-size: 32px;
+        margin: 0 0 12px 0;
+      }
+      .page-header p {
+        color: var(--muted);
+        font-size: 16px;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-header">
+      <div class="container">
+        <h1>ASHapp Logo</h1>
+        <p>Publicly accessible logos for BIMI (Brand Indicators for Message Identification)</p>
+      </div>
+    </div>
+
+    <div class="logo-container">
+      <div class="logo-section">
+        <h2>Logo</h2>
+        <div class="logo-display">
+          <img src="./assets/images/logo.svg" alt="ASHapp Logo" />
+        </div>
+        <div>
+          <div class="logo-url-label">Direct URL:</div>
+          <div class="logo-url">https://ashapp.pl/assets/images/logo.svg</div>
+        </div>
+      </div>
+
+      <div class="logo-section">
+        <h2>Small Logo</h2>
+        <div class="logo-display">
+          <img src="./assets/images/small_logo.svg" alt="ASHapp Small Logo" />
+        </div>
+        <div>
+          <div class="logo-url-label">Direct URL:</div>
+          <div class="logo-url">https://ashapp.pl/assets/images/small_logo.svg</div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <a class="brand" href="./">
+            <span class="brand-ash">ASH</span><span class="brand-app">app</span>
+          </a>
+        </div>
+        <div class="footer-copy">© <span id="y"></span> ASHapp</div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+
