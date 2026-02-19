@@ -1,95 +1,141 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ASHapp – Privacy Policy</title>
-    <link rel="icon" type="image/svg+xml" href="./assets/images/pig.svg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Righteous&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <!-- Beta Banner -->
-    <div class="beta-banner">
-      <div class="container">
-        <span class="beta-text">ASHapp is currently in beta test</span>
-      </div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ASHapp – Privacy Policy</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/images/pig.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Righteous&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+  <!-- Beta Banner -->
+  <div class="beta-banner">
+    <div class="container">
+      <span class="beta-text">ASHapp is currently in beta — <a href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta" style="color:inherit;text-decoration:underline;">join the beta now</a></span>
     </div>
+  </div>
 
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="./">
-          <span class="brand-ash">ASH</span><span class="brand-app">app</span>
-        </a>
-        <nav class="nav">
-          <a href="./mnemonics">Mnemonics</a>
-          <a class="active" href="./privacy">Privacy</a>
-          <a href="./terms">Terms</a>
-        </nav>
-        <button class="nav-toggle" aria-label="Open menu">☰</button>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./">
+        <span class="brand-ash">ASH</span><span class="brand-app">app</span>
+      </a>
+      <nav class="nav">
+        <a href="./#features">Features</a>
+        <a href="./pricing">Pricing</a>
+        <a href="./mnemonics">Mnemonics</a>
+        <a class="active" href="./privacy">Privacy</a>
+        <a class="nav-cta" href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta">Join Beta</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="nav-overlay" id="navOverlay"></div>
+  <div class="nav-drawer" id="navDrawer">
+    <div class="drawer-header">
+      <a class="brand" href="./">
+        <span class="brand-ash">ASH</span><span class="brand-app">app</span>
+      </a>
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <nav class="drawer-nav">
+      <a href="./#features"><i data-lucide="sparkles"></i>Features</a>
+      <a href="./pricing"><i data-lucide="layers"></i>Pricing</a>
+      <a href="./mnemonics"><i data-lucide="brain"></i>Mnemonics</a>
+      <div class="drawer-divider"></div>
+      <a href="./privacy" class="active"><i data-lucide="shield"></i>Privacy Policy</a>
+      <a href="./terms"><i data-lucide="file-text"></i>Terms of Service</a>
+    </nav>
+    <div class="drawer-cta">
+      <a class="btn btn-primary" style="width:100%;justify-content:center;" href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta">
+        <i data-lucide="mail"></i> Join Beta
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <section class="page-hero privacy-hero">
+      <div class="container center">
+        <h1>Privacy Policy</h1>
+        <p>We respect your privacy. Below is a concise web version; the in-app policy controls in case of differences.</p>
       </div>
-    </header>
+    </section>
 
-    <main>
-      <section class="page-hero privacy-hero">
-        <div class="container center">
-          <h1>Privacy Policy</h1>
-          <p>We respect your privacy. Below is a concise web version; the in-app policy controls in case of differences.</p>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container doc">
-          <div id="privacy-content"></div>
+    <section class="section">
+      <div class="container doc">
+        <div id="privacy-content"></div>
+        
+        <div class="doc-section">
+          <h2 id="camera-screenshots">Camera, Screenshots, and Photo Library Access</h2>
           
-          <div class="doc-section">
-            <h2 id="camera-screenshots">Camera, Screenshots, and Photo Library Access</h2>
-            
-            <h3>Camera and Screenshots for Issue Reporting</h3>
-            <p><strong>Purpose:</strong> We only use the camera or accept screenshots when you report an issue in the app, so you can attach a screenshot to help us diagnose the problem. We do not perform background capture or biometric/face recognition.</p>
-            <p><strong>Data Collected:</strong> The screenshot or image you choose to attach and any optional text you provide in the report.</p>
-            <p><strong>Storage:</strong> Images remain on your device unless you explicitly submit them with the report. If submitted, they are stored securely on our AWS S3 servers for support purposes only.</p>
-            <p><strong>Sharing:</strong> Not sold. Not shared with third parties except trusted processors (AWS for storage) under data processing agreements.</p>
-            <p><strong>Retention:</strong> Kept only until the reported issue is resolved or until you delete your account—whichever happens first.</p>
-            <p><strong>Optional:</strong> Granting camera permission or attaching screenshots is optional. The app works without this permission; you can deny it and still use ASHapp.</p>
-            
-            <h3>Photo Library Access for OCR (Text Recognition)</h3>
-            <p><strong>Purpose:</strong> We request photo library access when you use the "Import from Notes" feature to select images containing text that you want to convert into learning materials.</p>
-            <p><strong>Data Collected:</strong> Only the images you explicitly select from your photo library.</p>
-            <p><strong>Processing:</strong> Selected images are temporarily sent to Microsoft Azure Document Intelligence for text extraction (OCR). Only image content is sent—no personal identifiers like email or user ID. Azure does not retain your images after processing.</p>
-            <p><strong>Storage:</strong> The extracted text (not the images) is saved in your learning collections on AWS infrastructure. Images themselves are not stored in our systems.</p>
-            <p><strong>Optional:</strong> This feature is entirely optional. You can use ASHapp without granting photo library access.</p>
-          </div>
+          <h3>Camera and Screenshots for Issue Reporting</h3>
+          <p><strong>Purpose:</strong> We only use the camera or accept screenshots when you report an issue in the app, so you can attach a screenshot to help us diagnose the problem. We do not perform background capture or biometric/face recognition.</p>
+          <p><strong>Data Collected:</strong> The screenshot or image you choose to attach and any optional text you provide in the report.</p>
+          <p><strong>Storage:</strong> Images remain on your device unless you explicitly submit them with the report. If submitted, they are stored securely on our AWS S3 servers for support purposes only.</p>
+          <p><strong>Sharing:</strong> Not sold. Not shared with third parties except trusted processors (AWS for storage) under data processing agreements.</p>
+          <p><strong>Retention:</strong> Kept only until the reported issue is resolved or until you delete your account—whichever happens first.</p>
+          <p><strong>Optional:</strong> Granting camera permission or attaching screenshots is optional. The app works without this permission; you can deny it and still use ASHapp.</p>
           
-          <div class="doc-section">
-            <p><strong>Contact:</strong> <a href="mailto:privacy@ashapp.pl">privacy@ashapp.pl</a></p>
-            <p>We will respond to your request within 30 days.</p>
-          </div>
+          <h3>Photo Library Access for OCR (Text Recognition)</h3>
+          <p><strong>Purpose:</strong> We request photo library access when you use the "Import from Notes" feature to select images containing text that you want to convert into learning materials.</p>
+          <p><strong>Data Collected:</strong> Only the images you explicitly select from your photo library.</p>
+          <p><strong>Processing:</strong> Selected images are temporarily sent to Microsoft Azure Document Intelligence for text extraction (OCR). Only image content is sent—no personal identifiers like email or user ID. Azure does not retain your images after processing.</p>
+          <p><strong>Storage:</strong> The extracted text (not the images) is saved in your learning collections on AWS infrastructure. Images themselves are not stored in our systems.</p>
+          <p><strong>Optional:</strong> This feature is entirely optional. You can use ASHapp without granting photo library access.</p>
         </div>
-      </section>
-    </main>
+        
+        <div class="doc-section">
+          <p><strong>Contact:</strong> <a href="mailto:privacy@ashapp.pl">privacy@ashapp.pl</a></p>
+          <p>We will respond to your request within 30 days.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <div class="footer-brand">
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand-col">
           <a class="brand" href="./">
             <span class="brand-ash">ASH</span><span class="brand-app">app</span>
           </a>
+          <p class="footer-tagline">AI flashcards with mnemonics for faster, deeper learning.</p>
         </div>
-        <nav class="footer-nav">
-          <a href="./mnemonics">Mnemonics</a>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="./#features">Features</a>
+          <a href="./pricing">Pricing</a>
+          <a href="./mnemonics">Why Mnemonics?</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
           <a href="./privacy">Privacy Policy</a>
           <a href="./terms">Terms of Service</a>
           <a href="./delete-account">Delete Account</a>
-        </nav>
-        <div class="footer-copy">© <span id="y"></span> ASHapp</div>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="mailto:admin@ashapp.pl">admin@ashapp.pl</a>
+          <a href="mailto:privacy@ashapp.pl">privacy@ashapp.pl</a>
+        </div>
       </div>
-    </footer>
+      <div class="footer-bottom">
+        <span class="footer-copy">© <span id="y"></span> ASHapp. All rights reserved.</span>
+        <span class="footer-contact"><a href="mailto:admin@ashapp.pl">admin@ashapp.pl</a></span>
+      </div>
+    </div>
+  </footer>
 
-    <script src="./script.js"></script>
-  </body>
-  </html>
-
-
+  <script src="./script.js"></script>
+</body>
+</html>

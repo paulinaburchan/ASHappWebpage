@@ -1,13 +1,80 @@
-// Update copyright year
+// ─── Initialise Lucide icons ────────────────────────────────────────────────
+if (typeof lucide !== 'undefined') { lucide.createIcons(); }
+
+// ─── Copyright year ──────────────────────────────────────────────────────────
 document.getElementById('y').textContent = new Date().getFullYear();
 
-// Mobile navigation toggle
-document.querySelector('.nav-toggle').addEventListener('click', function() {
-  const nav = document.querySelector('.nav');
-  nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-});
+// ─── Mobile nav drawer ───────────────────────────────────────────────────────
+(function () {
+  const toggle   = document.getElementById('navToggle');
+  const drawer   = document.getElementById('navDrawer');
+  const overlay  = document.getElementById('navOverlay');
+  const closeBtn = document.getElementById('drawerClose');
+  if (!toggle || !drawer) return;
 
-// Fun confetti effect for main CTA buttons
+  function openDrawer() {
+    drawer.classList.add('open');
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeDrawer() {
+    drawer.classList.remove('open');
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  toggle.addEventListener('click', openDrawer);
+  if (closeBtn)  closeBtn.addEventListener('click', closeDrawer);
+  if (overlay)   overlay.addEventListener('click', closeDrawer);
+
+  // Close drawer when a nav link is clicked
+  drawer.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', closeDrawer);
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeDrawer();
+  });
+})();
+
+// ─── Scroll-based fade-up animations ────────────────────────────────────────
+(function () {
+  var els = document.querySelectorAll('.fade-up, .feature-card');
+  if (!els.length || typeof IntersectionObserver === 'undefined') {
+    els.forEach(function (el) { el.classList.add('visible'); });
+    return;
+  }
+  var obs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  els.forEach(function (el) { obs.observe(el); });
+})();
+
+// ─── FAQ accordion ───────────────────────────────────────────────────────────
+(function () {
+  var faqList = document.getElementById('faqList');
+  if (!faqList) return;
+  faqList.querySelectorAll('.faq-item').forEach(function (item) {
+    var btn = item.querySelector('.faq-question');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var isOpen = item.classList.contains('open');
+      // Close all others
+      faqList.querySelectorAll('.faq-item.open').forEach(function (o) {
+        o.classList.remove('open');
+      });
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+})();
+
+// ─── Confetti effect ─────────────────────────────────────────────────────────
 function createConfetti() {
   const colors = ['#FF8E53', '#EA596E', '#2E5946', '#FFB366'];
   const confettiCount = 50;
@@ -39,19 +106,8 @@ function createConfetti() {
 }
 
 // Add confetti to main CTA buttons
-document.querySelectorAll('.btn-primary').forEach(button => {
+document.querySelectorAll('.btn-primary, .btn-highlight').forEach(button => {
   button.addEventListener('click', createConfetti);
-});
-
-// Add some fun hover effects to the animal icons
-document.querySelectorAll('.icon-container').forEach(icon => {
-  icon.addEventListener('mouseenter', function() {
-    this.style.transform = 'translateY(-5px) scale(1.05) rotate(5deg)';
-  });
-  
-  icon.addEventListener('mouseleave', function() {
-    this.style.transform = 'translateY(0) scale(1) rotate(0deg)';
-  });
 });
 
 // Full Privacy Policy and Terms of Service content from the app
@@ -67,7 +123,17 @@ if (privacy) {
     </div>
 
     <div class="doc-section">
-      <h2>2. Data We Collect</h2>
+      <h2>2. Camera and Screenshots</h2>
+      <p><strong>Purpose:</strong> We only use the camera or accept screenshots when you report an issue in the app, so you can attach a screenshot to help us diagnose the problem. We do not perform background capture or biometric/face recognition.</p>
+      <p><strong>Data Collected:</strong> The screenshot or image you choose to attach and any optional text you provide in the report.</p>
+      <p><strong>Storage:</strong> Images remain on your device unless you explicitly submit them with the report. If submitted, they are stored securely on our servers for support purposes only.</p>
+      <p><strong>Sharing:</strong> Not sold. Not shared with third parties except trusted processors (e.g., cloud storage/helpdesk) under data processing agreements.</p>
+      <p><strong>Retention:</strong> Kept only until the reported issue is resolved or until you delete your account—whichever happens first.</p>
+      <p><strong>Optional:</strong> Granting camera permission or attaching screenshots is optional. The app works without this permission; you can deny it and still use ASHapp.</p>
+    </div>
+
+    <div class="doc-section">
+      <h2>3. Data We Collect</h2>
       <p>We collect the following types of personal data:</p>
       <ul>
         <li><strong>Account Information:</strong> Email address, user ID, and authentication tokens</li>
@@ -78,7 +144,7 @@ if (privacy) {
     </div>
 
     <div class="doc-section">
-      <h2>3. How We Use Your Data</h2>
+      <h2>4. How We Use Your Data</h2>
       <p>We use your personal data for the following purposes:</p>
       <ul>
         <li><strong>Service Provision:</strong> To provide and maintain the ASHapp learning platform</li>
@@ -91,7 +157,7 @@ if (privacy) {
     </div>
 
     <div class="doc-section">
-      <h2>4. Legal Basis for Processing</h2>
+      <h2>5. Legal Basis for Processing</h2>
       <p>We process your personal data based on the following legal grounds:</p>
       <ul>
         <li><strong>Contract:</strong> To fulfill our service agreement with you</li>
@@ -101,7 +167,7 @@ if (privacy) {
     </div>
 
     <div class="doc-section">
-      <h2>5. Data Storage and Processing</h2>
+      <h2>6. Data Storage and Processing</h2>
       <p><strong>AWS Cloud Services:</strong> Your learning materials, account data, and app data are stored on Amazon Web Services (AWS) cloud infrastructure located in the European Union (EU) to ensure GDPR compliance.</p>
       <p><strong>OpenAI AI Processing:</strong> When you use AI-generated features, your content may be processed by OpenAI services. This includes: (1) GPT-4 for generating learning collections and processing text, and (2) DALL-E 3 for generating images. All AI-generated content is filtered through OpenAI's content moderation system to prevent inappropriate, violent, or sexual content. DALL-E 3 includes built-in safety filters that automatically reject prompts violating content policies. Images are stored in our secure AWS S3 storage. We do not use your data to train OpenAI's models.</p>
       <p><strong>Microsoft Azure Document Intelligence:</strong> When you use the OCR (text recognition) feature to import notes from images, your uploaded images are temporarily processed by Microsoft Azure Document Intelligence to extract text. Only the image content is sent—no personal identifiers (email, user ID, or account information) are included. Once text extraction is complete, Azure does not retain your images. The extracted text is returned to our system for creating your learning materials.</p>
@@ -109,7 +175,7 @@ if (privacy) {
     </div>
 
     <div class="doc-section">
-      <h2>6. Third-Party Services</h2>
+      <h2>7. Third-Party Services</h2>
       <p>We use the following third-party services:</p>
       <ul>
         <li><strong>Amazon Web Services (AWS):</strong> For cloud hosting, data storage, and infrastructure services</li>
@@ -120,7 +186,7 @@ if (privacy) {
     </div>
 
     <div class="doc-section">
-      <h2>7. Data Retention</h2>
+      <h2>8. Data Retention</h2>
       <p>We retain your personal data for as long as your account is active or as needed to provide services. When you delete your account, your account, learning materials, and uploaded images are deleted immediately and permanently. Only system logs are retained for up to 90 days.</p>
       <ul>
         <li><strong>Learning Materials:</strong> Your user-generated content (collections, concepts, images) is deleted immediately upon account deletion</li>
@@ -133,41 +199,41 @@ if (privacy) {
     </div>
 
     <div class="doc-section">
-      <h2>8. Your Rights</h2>
+      <h2>9. Your Rights</h2>
       <p>Under applicable data protection laws, you have the right to:</p>
       <ul>
         <li><strong>Access:</strong> Request a copy of your personal data</li>
         <li><strong>Rectification:</strong> Correct inaccurate information</li>
+        <li><strong>Erasure:</strong> Delete your account and all associated data</li>
         <li><strong>Portability:</strong> Export your data in a machine-readable format</li>
         <li><strong>Objection:</strong> Object to certain types of processing</li>
-        <li><strong>Deletion:</strong> Request deletion of your account and all associated data. <a href="./delete-account">Learn how to delete your account</a></li>
       </ul>
     </div>
 
     <div class="doc-section">
-      <h2>9. International Data Transfers</h2>
+      <h2>10. International Data Transfers</h2>
       <p>Your data is primarily stored in the European Union (Stockholm, Sweden). Any transfers outside the EU are protected by appropriate safeguards, including Standard Contractual Clauses (SCCs) and adequacy decisions.</p>
     </div>
 
     <div class="doc-section">
-      <h2>10. Children's Privacy</h2>
+      <h2>11. Children's Privacy</h2>
       <p>ASHapp is not intended for children under 16. We do not knowingly collect personal information from children under 16. If you believe we have collected such information, please contact us immediately.</p>
     </div>
 
     <div class="doc-section">
-      <h2>11. Changes to This Policy</h2>
+      <h2>12. Changes to This Policy</h2>
       <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy in the app and updating the "Last updated" date.</p>
     </div>
 
     <div class="doc-section">
-      <h2>12. Contact Us</h2>
+      <h2>13. Contact Us</h2>
       <p>If you have any questions about this Privacy Policy or want to exercise your rights, please contact us:</p>
       <p><a href="mailto:privacy@ashapp.pl">privacy@ashapp.pl</a></p>
       <p>We will respond to your request within 30 days.</p>
     </div>
 
     <div class="doc-section">
-      <h2>13. Supervisory Authority</h2>
+      <h2>14. Supervisory Authority</h2>
       <p>If you are in the European Union and believe your data protection rights have been violated, you have the right to lodge a complaint with your local data protection supervisory authority.</p>
     </div>
   `;

@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pricing – ASHapp Plans & Subscriptions</title>
+  <meta name="description" content="Compare ASHapp subscription plans. Starter is free forever. Achiever and Pioneer unlock the full power of AI mnemonics, image generation, smart context, OCR, and more." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://ashapp.pl/pricing" />
+  <link rel="icon" type="image/svg+xml" href="./assets/images/pig.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Righteous&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+  <!-- Beta Banner -->
+  <div class="beta-banner">
+    <div class="container">
+      <span class="beta-text">ASHapp is currently in beta — <a href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta" style="color:inherit;text-decoration:underline;">join the beta now</a></span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./">
+        <span class="brand-ash">ASH</span><span class="brand-app">app</span>
+      </a>
+      <nav class="nav">
+        <a href="./#features">Features</a>
+        <a href="./pricing" class="active">Pricing</a>
+        <a href="./mnemonics">Mnemonics</a>
+        <a class="nav-cta" href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta">Join Beta</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Overlay + Drawer -->
+  <div class="nav-overlay" id="navOverlay"></div>
+  <div class="nav-drawer" id="navDrawer">
+    <div class="drawer-header">
+      <a class="brand" href="./">
+        <span class="brand-ash">ASH</span><span class="brand-app">app</span>
+      </a>
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <nav class="drawer-nav">
+      <a href="./#features"><i data-lucide="sparkles"></i>Features</a>
+      <a href="./pricing" class="active"><i data-lucide="layers"></i>Pricing</a>
+      <a href="./mnemonics"><i data-lucide="brain"></i>Mnemonics</a>
+      <div class="drawer-divider"></div>
+      <a href="./privacy"><i data-lucide="shield"></i>Privacy Policy</a>
+      <a href="./terms"><i data-lucide="file-text"></i>Terms of Service</a>
+    </nav>
+    <div class="drawer-cta">
+      <a class="btn btn-primary" style="width:100%;justify-content:center;" href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta">
+        <i data-lucide="mail"></i> Join Beta
+      </a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="section-label" style="margin:0 auto 16px;"><i data-lucide="layers"></i> Subscription Plans</div>
+        <h1>Simple, Transparent <span class="highlight">Pricing</span></h1>
+        <p>Start free and upgrade when you're ready to unlock the full power of AI-assisted learning. Beta testers get exclusive early-bird pricing when paid plans launch.</p>
+      </div>
+    </section>
+
+    <!-- PRICING CARDS -->
+    <section class="section section-tinted">
+      <div class="container">
+        <div class="pricing-grid">
+
+          <!-- Starter -->
+          <div class="pricing-card fade-up fade-up-delay-1">
+            <div class="pricing-tier">
+              <div class="pricing-tier-icon starter"><i data-lucide="seedling"></i></div>
+              <span class="pricing-tier-name">Starter</span>
+            </div>
+            <div class="pricing-price">Free</div>
+            <div class="pricing-price-note">Forever free · No credit card</div>
+            <p class="pricing-desc">Get started with the core flashcard experience and see how mnemonic learning feels.</p>
+            <div class="pricing-divider"></div>
+            <ul class="pricing-features">
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>3 standard collections</li>
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>Up to 100 concepts per collection</li>
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>3 AI mnemonic images <em>(lifetime)</em></li>
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>Daily streak &amp; personal goals</li>
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>Learning &amp; writing mode</li>
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>Collection sharing</li>
+              <li class="pricing-feature muted"><span class="cross"><i data-lucide="x"></i></span>AI collection generation</li>
+              <li class="pricing-feature muted"><span class="cross"><i data-lucide="x"></i></span>AI context &amp; related words</li>
+              <li class="pricing-feature muted"><span class="cross"><i data-lucide="x"></i></span>OCR note import</li>
+            </ul>
+            <a class="btn btn-outline" href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta&body=Hi! I would like to join the ASHapp beta and start with the free Starter plan.">
+              <i data-lucide="mail"></i> Join Beta Free
+            </a>
+          </div>
+
+          <!-- Achiever (featured) -->
+          <div class="pricing-card featured fade-up fade-up-delay-2">
+            <span class="pricing-popular-badge">Most Popular</span>
+            <div class="pricing-tier">
+              <div class="pricing-tier-icon achiever"><i data-lucide="zap"></i></div>
+              <span class="pricing-tier-name">Achiever</span>
+            </div>
+            <div class="pricing-price">Coming Soon</div>
+            <div class="pricing-price-note">Early-bird pricing for beta testers</div>
+            <p class="pricing-desc">For dedicated learners who want AI to supercharge every study session with smart tools.</p>
+            <div class="pricing-divider"></div>
+            <ul class="pricing-features">
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>Unlimited collections</li>
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>Up to 300 concepts per collection</li>
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>10 AI mnemonic images / month</li>
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>3 AI collection generations / month <em>(up to 100 concepts each)</em></li>
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>10 AI context requests / month</li>
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>10 AI related words requests / month</li>
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>Daily streak &amp; goals</li>
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>All learning &amp; writing modes</li>
+              <li class="pricing-feature muted"><span class="cross"><i data-lucide="x"></i></span>OCR note import</li>
+            </ul>
+            <a class="btn btn-primary" href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta for Achiever early-bird pricing&body=Hi! I'm interested in the Achiever plan and would like to join the beta to get early-bird pricing.">
+              <i data-lucide="mail"></i> Get Early Access
+            </a>
+          </div>
+
+          <!-- Pioneer -->
+          <div class="pricing-card fade-up fade-up-delay-3">
+            <div class="pricing-tier">
+              <div class="pricing-tier-icon pioneer"><i data-lucide="rocket"></i></div>
+              <span class="pricing-tier-name">Pioneer</span>
+            </div>
+            <div class="pricing-price">Coming Soon</div>
+            <div class="pricing-price-note">Early-bird pricing for beta testers</div>
+            <p class="pricing-desc">For power users and polyglots who want the full AI arsenal with maximum limits.</p>
+            <div class="pricing-divider"></div>
+            <ul class="pricing-features">
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>Unlimited collections</li>
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>Unlimited concepts per collection</li>
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>200 AI mnemonic images / month</li>
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>100 AI collection generations / month <em>(up to 300 concepts each)</em></li>
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>1000 AI context requests / month</li>
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>1000 AI related words requests / month</li>
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>50 OCR note imports / month</li>
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>All learning &amp; writing modes</li>
+            </ul>
+            <a class="btn btn-outline" href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta for Pioneer early-bird pricing&body=Hi! I'm interested in the Pioneer plan and would like to join the beta to get early-bird pricing.">
+              <i data-lucide="mail"></i> Get Early Access
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Beta note -->
+        <div style="text-align:center;margin-top:36px;">
+          <div class="beta-notice" style="display:inline-block;max-width:600px;">
+            <p><i data-lucide="info" style="width:16px;height:16px;vertical-align:middle;margin-right:6px;"></i> <strong>Beta Early-Bird Offer:</strong> Join the beta now and lock in exclusive discounted pricing when paid plans launch. Payments will be available in all European currencies via PayPal, with monthly auto-renewal and promo code support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FULL COMPARISON TABLE -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header fade-up">
+          <div class="section-label"><i data-lucide="table"></i> Full Comparison</div>
+          <h2 class="section-title">Feature-by-Feature <span class="highlight">Breakdown</span></h2>
+          <p class="section-subtitle">A complete look at what each plan includes so you can choose with confidence.</p>
+        </div>
+        <div class="pricing-table-wrap fade-up">
+          <table class="pricing-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Starter</th>
+                <th class="th-featured">Achiever</th>
+                <th>Pioneer</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="tbl-group"><td colspan="4">Collections &amp; Concepts</td></tr>
+              <tr>
+                <td><i data-lucide="folder-open"></i> Standard collections</td>
+                <td>3</td>
+                <td class="td-featured">Unlimited</td>
+                <td>Unlimited</td>
+              </tr>
+              <tr>
+                <td><i data-lucide="layers"></i> Concepts per collection</td>
+                <td>100</td>
+                <td class="td-featured">300</td>
+                <td>Unlimited</td>
+              </tr>
+              <tr class="tbl-group"><td colspan="4">AI Features</td></tr>
+              <tr>
+                <td><i data-lucide="wand-2"></i> AI mnemonic images</td>
+                <td>3 <em style="font-size:0.8em">(lifetime)</em></td>
+                <td class="td-featured">10 / month</td>
+                <td>200 / month</td>
+              </tr>
+              <tr>
+                <td><i data-lucide="sparkles"></i> AI collection generation</td>
+                <td><span class="tbl-cross"><i data-lucide="x"></i></span></td>
+                <td class="td-featured">3 / month <em style="font-size:0.8em">(≤100 concepts)</em></td>
+                <td>100 / month <em style="font-size:0.8em">(≤300 concepts)</em></td>
+              </tr>
+              <tr>
+                <td><i data-lucide="message-circle"></i> AI context ("Context")</td>
+                <td><span class="tbl-cross"><i data-lucide="x"></i></span></td>
+                <td class="td-featured">10 / month</td>
+                <td>1000 / month</td>
+              </tr>
+              <tr>
+                <td><i data-lucide="list"></i> AI related words</td>
+                <td><span class="tbl-cross"><i data-lucide="x"></i></span></td>
+                <td class="td-featured">10 / month</td>
+                <td>1000 / month</td>
+              </tr>
+              <tr>
+                <td><i data-lucide="scan-text"></i> OCR note import</td>
+                <td><span class="tbl-cross"><i data-lucide="x"></i></span></td>
+                <td class="td-featured"><span class="tbl-cross"><i data-lucide="x"></i></span></td>
+                <td>50 / month</td>
+              </tr>
+              <tr class="tbl-group"><td colspan="4">Core Features</td></tr>
+              <tr>
+                <td><i data-lucide="flame"></i> Daily streak</td>
+                <td><span class="tbl-check"><i data-lucide="check"></i></span></td>
+                <td class="td-featured"><span class="tbl-check"><i data-lucide="check"></i></span></td>
+                <td><span class="tbl-check"><i data-lucide="check"></i></span></td>
+              </tr>
+              <tr>
+                <td><i data-lucide="target"></i> Personal goals</td>
+                <td><span class="tbl-check"><i data-lucide="check"></i></span></td>
+                <td class="td-featured"><span class="tbl-check"><i data-lucide="check"></i></span></td>
+                <td><span class="tbl-check"><i data-lucide="check"></i></span></td>
+              </tr>
+              <tr>
+                <td><i data-lucide="pencil-line"></i> Writing mode</td>
+                <td><span class="tbl-check"><i data-lucide="check"></i></span></td>
+                <td class="td-featured"><span class="tbl-check"><i data-lucide="check"></i></span></td>
+                <td><span class="tbl-check"><i data-lucide="check"></i></span></td>
+              </tr>
+              <tr>
+                <td><i data-lucide="share-2"></i> Collection sharing</td>
+                <td><span class="tbl-check"><i data-lucide="check"></i></span></td>
+                <td class="td-featured"><span class="tbl-check"><i data-lucide="check"></i></span></td>
+                <td><span class="tbl-check"><i data-lucide="check"></i></span></td>
+              </tr>
+              <tr>
+                <td><i data-lucide="globe"></i> Multilingual learning</td>
+                <td><span class="tbl-check"><i data-lucide="check"></i></span></td>
+                <td class="td-featured"><span class="tbl-check"><i data-lucide="check"></i></span></td>
+                <td><span class="tbl-check"><i data-lucide="check"></i></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-tinted">
+      <div class="container" style="max-width:800px;">
+        <div class="section-header fade-up">
+          <div class="section-label"><i data-lucide="help-circle"></i> FAQ</div>
+          <h2 class="section-title">Frequently Asked <span class="highlight">Questions</span></h2>
+        </div>
+        <div class="faq-list" id="faqList">
+
+          <div class="faq-item">
+            <button class="faq-question">
+              What is OCR note import?
+              <i data-lucide="plus" class="faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                OCR (Optical Character Recognition) lets you photograph pages of notes, textbooks, or handwritten vocabulary lists. ASHapp's AI scans the image and automatically creates multiple flashcard concepts from the text — not just one word at a time like other apps. It's exclusive to the Pioneer plan. Images are temporarily processed by Microsoft Azure Document Intelligence and are not stored after text extraction.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              What is AI collection generation?
+              <i data-lucide="plus" class="faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Instead of manually adding every concept, you can ask the AI to generate a whole collection for you on any topic — vocabulary sets, grammar concepts, historical facts, etc. Achiever gets 3 requests per month (up to 100 concepts per request), while Pioneer gets 100 requests per month (up to 300 concepts each). Content is generated via GPT-4 and filtered for safety and relevance.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              What are AI context and related words?
+              <i data-lucide="plus" class="faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <strong>AI Context</strong> enriches a flashcard with example sentences, usage notes, and explanations to help you understand a concept in context — not just its definition. <strong>AI Related Words</strong> shows synonyms, antonyms, and semantically similar words to deepen your understanding and expand your vocabulary network. Both are monthly request limits that reset each calendar month.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              When will paid plans be available?
+              <i data-lucide="plus" class="faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Paid plans (Achiever and Pioneer) will launch after the beta period. We will announce pricing before the public launch. Beta testers will receive exclusive early-bird discounts as a thank-you for helping shape the app. Payment will be available in all European currencies via PayPal, with monthly auto-renewal and support for promo codes.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Can I upgrade or downgrade my plan later?
+              <i data-lucide="plus" class="faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes! You can change your subscription at any time from within the app under Profile / Account Settings. Upgrades take effect immediately. Downgrades take effect at the end of the current billing period. The Starter plan is always available as the default minimum — you can never be left with nothing.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              How are AI image credits used?
+              <i data-lucide="plus" class="faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Each time you ask the AI to generate a visual mnemonic image for a flashcard concept, one credit is used. Starter users get 3 images as a one-time lifetime allowance to try the feature. Achiever and Pioneer users receive monthly credits that reset on the first of each month. Images are generated via DALL-E 3 and stored in your account on our secure AWS infrastructure.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              What happens to my data if I cancel?
+              <i data-lucide="plus" class="faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                If you downgrade, you keep all data you've created — you simply lose access to features above your new plan's limits. If you delete your account, all data is permanently and immediately deleted from our systems. Only anonymised system logs (no personal data) are retained for up to 90 days for technical debugging purposes.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BAND -->
+    <section class="cta-band">
+      <div class="container center">
+        <h2>Join the Beta and <span style="color:var(--highlight)">Lock In Early Pricing</span></h2>
+        <p>Be among the first to use ASHapp and secure exclusive early-bird pricing on paid plans when they launch.</p>
+        <a class="btn btn-highlight btn-lg" href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta&body=Hi! I'm interested in joining the ASHapp beta to get early-bird pricing on paid plans.">
+          <i data-lucide="mail"></i> Join the Beta Today
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand-col">
+          <a class="brand" href="./">
+            <span class="brand-ash">ASH</span><span class="brand-app">app</span>
+          </a>
+          <p class="footer-tagline">AI flashcards with mnemonics for faster, deeper learning.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="./#features">Features</a>
+          <a href="./pricing">Pricing</a>
+          <a href="./mnemonics">Why Mnemonics?</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="./privacy">Privacy Policy</a>
+          <a href="./terms">Terms of Service</a>
+          <a href="./delete-account">Delete Account</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="mailto:admin@ashapp.pl">admin@ashapp.pl</a>
+          <a href="mailto:privacy@ashapp.pl">privacy@ashapp.pl</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">© <span id="y"></span> ASHapp. All rights reserved.</span>
+        <span class="footer-contact"><a href="mailto:admin@ashapp.pl">admin@ashapp.pl</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>

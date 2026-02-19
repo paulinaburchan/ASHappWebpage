@@ -14,10 +14,18 @@
     <xhtml:link rel="alternate" hreflang="pl" href="https://ashapp.pl/"/>
   </url>
   
+  <!-- Pricing Page -->
+  <url>
+    <loc>https://ashapp.pl/pricing</loc>
+    <lastmod>2026-02-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Mnemonics Page -->
   <url>
     <loc>https://ashapp.pl/mnemonics</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2026-02-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

@@ -1,274 +1,513 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
-    <!-- Primary Meta Tags -->
-    <title>ASHapp – AI Flashcards with Mnemonics & Visual Associations for Memory Boost</title>
-    <meta name="title" content="ASHapp – AI Flashcards with Mnemonics & Visual Associations for Memory Boost" />
-    <meta name="description" content="Revolutionary flashcards app with AI-powered mnemonics and visual associations. Learn languages faster with mnemotechnik flashcards that visualize your mental associations. Smart OCR, spaced repetition, and memory techniques in one app." />
-    <meta name="keywords" content="flashcards with associations, mnemonics flashcards, mnemonic flashcards, mnemotechnik flashcards, visual associations learning, AI flashcards, spaced repetition flashcards, language learning flashcards, memory techniques app, association method flashcards, smart flashcards, vocabulary flashcards, learning with mnemonics, mental associations" />
-    <meta name="author" content="ASHapp" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://ashapp.pl/" />
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://ashapp.pl/" />
-    <meta property="og:title" content="ASHapp – AI Flashcards with Mnemonics & Visual Associations" />
-    <meta property="og:description" content="Revolutionary flashcards app with AI-powered mnemonics and visual associations. Learn languages faster with memory techniques." />
-    <meta property="og:image" content="https://ashapp.pl/assets/images/icon.png" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:site_name" content="ASHapp" />
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://ashapp.pl/" />
-    <meta property="twitter:title" content="ASHapp – AI Flashcards with Mnemonics & Visual Associations" />
-    <meta property="twitter:description" content="Revolutionary flashcards app with AI-powered mnemonics and visual associations for faster learning." />
-    <meta property="twitter:image" content="https://ashapp.pl/assets/images/icon.png" />
-    
-    <!-- Language Alternatives -->
-    <link rel="alternate" hreflang="en" href="https://ashapp.pl/" />
-    <link rel="alternate" hreflang="de" href="https://ashapp.pl/" />
-    <link rel="alternate" hreflang="es" href="https://ashapp.pl/" />
-    <link rel="alternate" hreflang="pl" href="https://ashapp.pl/" />
-    <link rel="alternate" hreflang="x-default" href="https://ashapp.pl/" />
-    
-    <link rel="icon" type="image/svg+xml" href="./assets/images/pig.svg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Righteous&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css" />
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    
-    <!-- Structured Data / Schema.org -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "ASHapp",
-      "applicationCategory": "EducationalApplication",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "ratingCount": "150"
-      },
-      "operatingSystem": "Android, iOS",
-      "description": "AI-powered flashcards app with mnemonics and visual associations for accelerated learning. Features smart OCR, spaced repetition, and mnemonic techniques.",
-      "url": "https://ashapp.pl",
-      "screenshot": "https://ashapp.pl/assets/images/icon.png",
-      "keywords": "flashcards, mnemonics, associations, language learning, memory techniques, mnemotechnik",
-      "creator": {
-        "@type": "Person",
-        "name": "ASHapp Developer"
-      }
-    }
-    </script>
-  </head>
-  <body>
-    <!-- Beta Banner -->
-    <div class="beta-banner">
-      <div class="container">
-        <span class="beta-text">ASHapp is currently in beta test</span>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Primary Meta Tags -->
+  <title>ASHapp – AI Flashcards with Mnemonics & Visual Associations for Memory Boost</title>
+  <meta name="title" content="ASHapp – AI Flashcards with Mnemonics & Visual Associations for Memory Boost" />
+  <meta name="description" content="Revolutionary flashcards app with AI-powered mnemonics and visual associations. Learn languages faster with mnemotechnik flashcards that visualize your mental associations. Smart OCR, spaced repetition, and memory techniques in one app." />
+  <meta name="keywords" content="flashcards with associations, mnemonics flashcards, mnemonic flashcards, mnemotechnik flashcards, visual associations learning, AI flashcards, spaced repetition flashcards, language learning flashcards, memory techniques app, association method flashcards, smart flashcards, vocabulary flashcards, learning with mnemonics, mental associations" />
+  <meta name="author" content="ASHapp" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://ashapp.pl/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ashapp.pl/" />
+  <meta property="og:title" content="ASHapp – AI Flashcards with Mnemonics & Visual Associations" />
+  <meta property="og:description" content="Revolutionary flashcards app with AI-powered mnemonics and visual associations. Learn languages faster with memory techniques." />
+  <meta property="og:image" content="https://ashapp.pl/assets/images/icon.png" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="ASHapp" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://ashapp.pl/" />
+  <meta property="twitter:title" content="ASHapp – AI Flashcards with Mnemonics & Visual Associations" />
+  <meta property="twitter:description" content="Revolutionary flashcards app with AI-powered mnemonics and visual associations for faster learning." />
+  <meta property="twitter:image" content="https://ashapp.pl/assets/images/icon.png" />
+
+  <!-- Language Alternatives -->
+  <link rel="alternate" hreflang="en" href="https://ashapp.pl/" />
+  <link rel="alternate" hreflang="de" href="https://ashapp.pl/" />
+  <link rel="alternate" hreflang="es" href="https://ashapp.pl/" />
+  <link rel="alternate" hreflang="pl" href="https://ashapp.pl/" />
+  <link rel="alternate" hreflang="x-default" href="https://ashapp.pl/" />
+
+  <link rel="icon" type="image/svg+xml" href="./assets/images/pig.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Righteous&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ASHapp",
+    "applicationCategory": "EducationalApplication",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "operatingSystem": "Android, iOS",
+    "description": "AI-powered flashcards app with mnemonics and visual associations for accelerated learning.",
+    "url": "https://ashapp.pl",
+    "creator": { "@type": "Person", "name": "ASHapp Developer" }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Beta Banner -->
+  <div class="beta-banner">
+    <div class="container">
+      <span class="beta-text">ASHapp is currently in beta — <a href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta&body=Hi! I'm interested in joining the ASHapp beta test." style="color:inherit;text-decoration:underline;">join the beta now</a></span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./">
+        <span class="brand-ash">ASH</span><span class="brand-app">app</span>
+      </a>
+      <nav class="nav">
+        <a href="#features">Features</a>
+        <a href="./pricing">Pricing</a>
+        <a href="./mnemonics">Mnemonics</a>
+        <a class="nav-cta" href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta&body=Hi! I'm interested in joining the ASHapp beta test.">Join Beta</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Overlay + Drawer -->
+  <div class="nav-overlay" id="navOverlay"></div>
+  <div class="nav-drawer" id="navDrawer">
+    <div class="drawer-header">
+      <a class="brand" href="./">
+        <span class="brand-ash">ASH</span><span class="brand-app">app</span>
+      </a>
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <nav class="drawer-nav">
+      <a href="#features"><i data-lucide="sparkles"></i>Features</a>
+      <a href="./pricing"><i data-lucide="layers"></i>Pricing</a>
+      <a href="./mnemonics"><i data-lucide="brain"></i>Mnemonics</a>
+      <div class="drawer-divider"></div>
+      <a href="./privacy"><i data-lucide="shield"></i>Privacy Policy</a>
+      <a href="./terms"><i data-lucide="file-text"></i>Terms of Service</a>
+    </nav>
+    <div class="drawer-cta">
+      <a class="btn btn-primary" style="width:100%;justify-content:center;" href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta&body=Hi! I'm interested in joining the ASHapp beta test.">
+        <i data-lucide="mail"></i> Join Beta
+      </a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <div class="hero-badge">
+            <i data-lucide="sparkles"></i>
+            AI-Powered Mnemonic Learning
+          </div>
+          <h1>Learn Faster with <span class="highlight">Mnemonics</span> &amp; Visual AI</h1>
+          <p class="hero-subtitle">
+            The only flashcard app that uses AI to <strong>visualize your wildest mental associations</strong> — because your brain remembers the bizarre far better than the boring.
+          </p>
+          <div class="hero-ctas">
+            <div class="btn-play" role="button" aria-label="Coming soon to Google Play">
+              <i data-lucide="play-circle" class="play-icon"></i>
+              <div class="btn-play-text">
+                <small>Coming to</small>
+                <strong>Google Play</strong>
+              </div>
+              <span class="btn-play-badge">Soon</span>
+            </div>
+            <a class="btn btn-outline" href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta&body=Hi! I'm interested in joining the ASHapp beta test. Please let me know how I can get access.%0D%0A%0D%0AThanks!">
+              <i data-lucide="mail"></i>
+              Join Beta
+            </a>
+          </div>
+          <p class="hero-note">
+            <i data-lucide="check-circle"></i>
+            Free tier available · No credit card required
+          </p>
+        </div>
+        <div class="hero-visual">
+          <div class="phone-wrap">
+            <div class="phone">
+              <div class="phone-notch"></div>
+              <div class="phone-screen">
+                <div class="phone-app-bar">
+                  <span class="phone-brand brand">
+                    <span class="brand-ash">ASH</span><span class="brand-app">app</span>
+                  </span>
+                  <div class="phone-streak">
+                    <i data-lucide="flame"></i> 7
+                  </div>
+                </div>
+                <div class="phone-card-wrap">
+                  <div class="phone-card-label">Learning Mode · EN → ES</div>
+                  <div class="phone-flashcard">
+                    <div class="phone-word">Umbrella</div>
+                    <div class="phone-translation">paraguas</div>
+                    <div class="phone-mnemonic">
+                      <div class="phone-mnemonic-label">
+                        <i data-lucide="wand-2"></i> AI Mnemonic
+                      </div>
+                      <div class="phone-mnemonic-text">
+                        A <em>para</em>trooper lands holding a giant umbrella — "para-<em>guas</em>!"
+                      </div>
+                    </div>
+                  </div>
+                  <div class="phone-btns">
+                    <div class="phone-btn phone-btn-wrong">
+                      <i data-lucide="x"></i> Again
+                    </div>
+                    <div class="phone-btn phone-btn-right">
+                      <i data-lucide="check"></i> Got it
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <div class="stats-bar">
+      <div class="container stats-bar-inner">
+        <div class="stat-pill">
+          <i data-lucide="zap"></i>
+          <div>
+            <div class="stat-num">3×</div>
+            <div class="stat-desc">Faster Learning</div>
+          </div>
+        </div>
+        <div class="stat-pill">
+          <i data-lucide="brain"></i>
+          <div>
+            <div class="stat-num">72%</div>
+            <div class="stat-desc">Better Retention</div>
+          </div>
+        </div>
+        <div class="stat-pill">
+          <i data-lucide="sparkles"></i>
+          <div>
+            <div class="stat-num">9+</div>
+            <div class="stat-desc">AI Features</div>
+          </div>
+        </div>
+        <div class="stat-pill">
+          <i data-lucide="globe"></i>
+          <div>
+            <div class="stat-num">∞</div>
+            <div class="stat-desc">Languages</div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="./">
-          <span class="brand-ash">ASH</span><span class="brand-app">app</span>
-        </a>
-                                   <nav class="nav">
-          <a href="./mnemonics">Mnemonics</a>
-          <a href="./privacy">Privacy</a>
-          <a href="./terms">Terms</a>
-        </nav>
-        <button class="nav-toggle" aria-label="Open menu">☰</button>
+    <!-- CREATOR STORY -->
+    <section class="section section-alt creator-section">
+      <div class="container">
+        <div class="creator-inner">
+          <div class="creator-text">
+            <div class="section-label"><i data-lucide="user"></i> The Story</div>
+            <h2>Built by a <span class="highlight">Passionate Language Learner</span></h2>
+            <div class="creator-body">
+              <p>
+                ASHapp was born from my own frustration as a language learner who couldn't find an app that truly understood the power of mnemonic techniques. I wanted something that could leverage AI to create a custom, fast-paced learning experience.
+              </p>
+              <p>
+                That's why I built ASHapp — not just another flashcard app, but a <strong>simple and incredibly helpful tool</strong> that combines proven mnemonic techniques with AI to help you learn faster than ever. The weirder the association, the better your brain remembers it!
+              </p>
+              <p>
+                The app grows every day, and many more features are coming. Can't wait to share them with you!
+              </p>
+            </div>
+          </div>
+          <div class="creator-visual">
+            <div class="founder-photo">
+              <img src="./assets/images/founder.png" alt="ASHapp Founder" />
+            </div>
+          </div>
+        </div>
       </div>
-    </header>
+    </section>
 
-    <main>
-      <section class="hero">
-        <div class="container hero-inner">
-          <div class="hero-copy">
-            <h1>Revolutionary <span class="highlight">Flashcards with Mnemonics</span> & Visual Associations</h1>
-            <p class="hero-subtitle">The only flashcards app that combines AI-powered mnemonics with visual associations. Perfect for language learning, vocabulary building, and memory techniques (mnemotechnik).</p>
-            <p class="hero-main">Our AI delivers actual results—it <strong>visualizes your mental associations</strong> to create unforgettable mnemonic flashcards, making learning up to 3x faster!</p>
-            <div class="cta-row">
-              <a class="btn btn-primary" href="#current-features">Explore the Magic ✨</a>
-              <a class="btn btn-outline" href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta&body=Hi! I'm interested in joining the ASHapp beta test. Please let me know how I can get access to try out the app.%0D%0A%0D%0AThanks!">Join Beta</a>
-            </div>
-            <div class="play-store-cta">
-              <p class="play-store-text">🎮 Available Soon on Google Play</p>
-            </div>
-          </div>
-          <div class="hero-visual">
-            <div class="hero-icons">
-              <div class="icon-container ai-brain-icon">
-                <img src="./assets/images/ai-brain.svg" alt="AI-powered mnemonic flashcards with visual associations for memory boost" class="hero-svg">
-                <div class="icon-glow"></div>
-              </div>
-            </div>
-            <div class="phone-mockup">
-              <div class="ui-card">
-                <div class="ui-header">
-                  <span class="brand-ash">ASH</span><span class="brand-app">app</span>
-                </div>
-                <div class="ui-body">
-                  <div class="ui-pill"></div>
-                  <div class="ui-pill"></div>
-                  <div class="ui-pill wide"></div>
-                </div>
-              </div>
-            </div>
-          </div>
+    <!-- FEATURES -->
+    <section id="features" class="section section-tinted">
+      <div class="container">
+        <div class="section-header fade-up">
+          <div class="section-label"><i data-lucide="sparkles"></i> Features</div>
+          <h2 class="section-title">Everything You Need to <span class="highlight">Remember More</span></h2>
+          <p class="section-subtitle">Smart flashcards with AI-powered mnemonics, visual associations, and spaced repetition — all in one app.</p>
         </div>
-      </section>
-
-      <!-- Creator Story Section -->
-      <section class="section creator-story">
-        <div class="container">
-          <div class="creator-content">
-            <div class="creator-text">
-                             <h2>Built by a <span class="highlight">Passionate Language Learner</span> 🧠</h2>
-               <p class="creator-story-text">
-                 ASHapp was born from my own frustration as a language learner who couldn't find an app that truly understood the needs of someone using mnemonic techniques. I wanted something that could leverage technology to create a truly custom, fast-paced learning experience.
-               </p>
-               <p class="creator-story-text">
-                 That's why I built ASHapp—not just another flashcards app, but a <strong>simple and incredibly helpful tool</strong> that combines the power of AI with proven mnemonic techniques to help you learn faster than ever before.
-               </p>
-               <p class="creator-story-text">
-                 It's my mission to help everyone who loves learning languages but struggles with vocabulary. The app is growing every day, and I'm planning to add many more features using other proven techniques to accelerate learning. Can't wait to share them with you!
-               </p>
-            </div>
-            <div class="creator-visual">
-              <div class="founder-photo">
-                <img src="./assets/images/founder.png" alt="ASHapp Founder" class="founder-img">
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="current-features" class="section">
-        <div class="container">
-          <h2>Smart Flashcards with <span class="highlight">Visual Associations & Mnemonics</span></h2>
-          <p class="section-subtitle">Advanced mnemonic flashcards features <strong>available now</strong> – combining association method, spaced repetition, and AI-powered memory techniques!</p>
-          <div class="features-list">
-            <div class="feature-item">
+        <div class="features-grid">
+          <div class="feature-card fade-up fade-up-delay-1">
+            <div class="feature-icon-wrap"><i data-lucide="target"></i></div>
+            <div>
               <h3>Personal Goals</h3>
-              <p>Set up a goal that suits your needs—bigger or smaller, per day, week, or month. Edit whenever you need to adapt! Our flexible goal system grows with you, ensuring you never feel overwhelmed or underwhelmed by your learning targets.</p>
+              <p>Set a learning goal that fits your schedule — per day, week, or month. Adjust anytime. The app adapts to your pace, never making you feel overwhelmed.</p>
             </div>
-            <div class="feature-item">
+          </div>
+          <div class="feature-card fade-up fade-up-delay-2">
+            <div class="feature-icon-wrap"><i data-lucide="folder-open"></i></div>
+            <div>
               <h3>Collections</h3>
-              <p>Create collections of concepts for language learning or whatever you need. Don't want to start from scratch? AI can help! Organize your knowledge in intuitive ways that make sense to you, with smart suggestions that adapt to your learning style.</p>
+              <p>Organise concepts into collections for any subject or language. Don't want to start from scratch? Let AI generate a full collection for you in seconds.</p>
             </div>
-            <div class="feature-item">
-              <h3>Smart Flashcard</h3>
-              <p>AI helps with context, example sentences, synonyms, and antonyms of your concepts to maximize your learning results! Our intelligent flashcard system adapts to your performance, showing you the right content at the right time for optimal retention.</p>
-            </div>
-            <div class="feature-item">
-              <h3>Daily Streak</h3>
-              <p>Keep up and see how your streak is growing! Track your progress and stay motivated on your learning journey. Our gentle reminder system helps you maintain momentum without feeling pressured, celebrating every small victory along the way.</p>
-            </div>
-            <div class="feature-item">
-              <h3>Sharing Learning Materials</h3>
-              <p>Share your collections with friends or teammates to learn together and make the journey even more engaging! Collaborate on learning materials, challenge each other, and build a community of knowledge seekers who support each other's growth.</p>
-            </div>
-            <div class="feature-item">
+          </div>
+          <div class="feature-card fade-up fade-up-delay-3">
+            <div class="feature-icon-wrap"><i data-lucide="wand-2"></i></div>
+            <div>
               <h3>Mnemonics Boost</h3>
-              <p>Our AI visualizes your mental associations to make concepts stick in your brain like never before! Transform abstract concepts into memorable visual stories that your brain naturally wants to remember, making learning feel effortless and fun.</p>
-            </div>
-            <div class="feature-item">
-              <h3>Smart OCR Note Import</h3>
-              <p>Take a photo of your notes and watch the magic happen! Unlike other apps that extract only one word at a time, ASHapp's AI-powered OCR automatically converts entire pages into multiple concepts, creating a complete learning collection in seconds. Perfect for textbook notes, lecture materials, or handwritten vocabulary lists!</p>
+              <p>Our AI visualizes your mental associations to make concepts stick like never before. Bizarre, vivid, unforgettable — that's how your brain loves to learn.</p>
             </div>
           </div>
-        </div>
-      </section>
-
-      <!-- Coming Soon Features Section -->
-      <section class="section alt coming-soon">
-        <div class="container">
-          <h2><span class="highlight">Coming Soon</span> - The Future of Learning!</h2>
-          <p class="section-subtitle">I'm working hard to bring you these amazing features that will make ASHapp even more powerful!</p>
-          <div class="coming-soon-grid">
-            <div class="coming-soon-item">
-              <div class="coming-soon-icon">🌍</div>
-              <h3>Multilingual Flashcards</h3>
-              <p>Learn multiple languages simultaneously with our advanced multilingual flashcard system!</p>
+          <div class="feature-card fade-up fade-up-delay-1">
+            <div class="feature-icon-wrap"><i data-lucide="brain-circuit"></i></div>
+            <div>
+              <h3>Smart Flashcard</h3>
+              <p>Each flashcard is enriched with AI-generated context, example sentences, synonyms, and antonyms. The system adapts to your performance for optimal retention.</p>
             </div>
-            <div class="coming-soon-item">
-              <div class="coming-soon-icon">✍️</div>
+          </div>
+          <div class="feature-card fade-up fade-up-delay-2">
+            <div class="feature-icon-wrap"><i data-lucide="flame"></i></div>
+            <div>
+              <h3>Daily Streak</h3>
+              <p>Watch your streak grow day by day. Gentle reminders keep you on track without pressure — every small win is celebrated along the way.</p>
+            </div>
+          </div>
+          <div class="feature-card fade-up fade-up-delay-3">
+            <div class="feature-icon-wrap"><i data-lucide="share-2"></i></div>
+            <div>
+              <h3>Share Collections</h3>
+              <p>Share your collections with friends, classmates, or teammates. Learn together, challenge each other, and build a community of knowledge seekers.</p>
+            </div>
+          </div>
+          <div class="feature-card fade-up fade-up-delay-1">
+            <div class="feature-icon-wrap"><i data-lucide="scan-text"></i></div>
+            <div>
+              <h3>Smart OCR Import</h3>
+              <p>Photograph your notes and watch the magic happen. ASHapp's AI converts entire pages into multiple flashcard concepts in seconds — not one word at a time like other apps.</p>
+            </div>
+          </div>
+          <div class="feature-card fade-up fade-up-delay-2">
+            <div class="feature-icon-wrap"><i data-lucide="globe"></i></div>
+            <div>
+              <h3>Multilingual Learning</h3>
+              <p>Master multiple languages simultaneously. Switch between languages effortlessly and build a truly polyglot learning experience with no limits.</p>
+            </div>
+          </div>
+          <div class="feature-card fade-up fade-up-delay-3">
+            <div class="feature-icon-wrap"><i data-lucide="pencil-line"></i></div>
+            <div>
               <h3>Smart Writing Mode</h3>
-              <p>Practice writing with fuzzy matching—typos won't hold you back from getting the correct answer!</p>
+              <p>Practice writing with intelligent fuzzy matching — minor typos won't count against you. Build confidence naturally while the algorithm focuses on real understanding.</p>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Feedback Section -->
-      <section class="section feedback-section">
-        <div class="container center">
-          <h2>💡 <span class="highlight">Your Ideas Matter!</span></h2>
-          <p class="feedback-text">
-            Have an idea that could make ASHapp even better? I'd love to hear from you! Every piece of feedback is taken into account in our development roadmap.
-          </p>
-          <a class="btn btn-primary" href="mailto:admin@ashapp.pl?subject=Feature Request for ASHapp&body=Hi!%0D%0A%0D%0AI would love to see in ASHapp the following features...%0D%0A%0D%0ABecause...%0D%0A%0D%0AThank you for building such an amazing learning tool!%0D%0A%0D%0ABest regards">Share Your Ideas 💡</a>
+    <!-- COMING SOON -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header fade-up">
+          <div class="section-label"><i data-lucide="clock"></i> Coming Soon</div>
+          <h2 class="section-title">The <span class="highlight">Future</span> of Learning</h2>
+          <p class="section-subtitle">Exciting features in active development that will take ASHapp to the next level.</p>
         </div>
-      </section>
-
-      <section class="section alt cta-section">
-        <div class="container center">
-          <h2>Ready to Make Learning <span class="highlight">Unforgettable?</span></h2>
-          <p>Join the mnemonic technique revolution! Let AI boost your memory with intelligent assistance by your side.</p>
-          <a class="btn btn-primary" href="#benefits">Start Your Learning Journey</a>
-        </div>
-      </section>
-
-      <section class="section alt pig-section">
-        <div class="container center">
-          <div class="pig-animation-container">
-            <lottie-player 
-              src="./assets/images/Cute pig.json" 
-              background="transparent" 
-              speed="1" 
-              style="width: 200px; height: 200px;" 
-              loop 
-              autoplay>
-            </lottie-player>
+        <div class="coming-soon-grid">
+          <div class="coming-soon-card fade-up fade-up-delay-1">
+            <span class="coming-soon-badge"><i data-lucide="clock"></i> In Development</span>
+            <div class="coming-soon-icon"><i data-lucide="layout-dashboard"></i></div>
+            <h3>Learning Widget</h3>
+            <p>Transform your home screen into a learning powerhouse. The smart widget shows flashcards and associations right on your device — quick daily glances turn into powerful learning moments.</p>
           </div>
-          <p class="pig-note">Because learning should be as delightful as this little pig!</p>
+          <div class="coming-soon-card fade-up fade-up-delay-2">
+            <span class="coming-soon-badge"><i data-lucide="clock"></i> In Development</span>
+            <div class="coming-soon-icon"><i data-lucide="book-open"></i></div>
+            <h3>Bilingual Stories</h3>
+            <p>Immerse yourself in captivating stories crafted from your own concepts. Read engaging narratives in two languages side-by-side — vocabulary coming alive in context that actually sticks.</p>
+          </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
 
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <div class="footer-brand">
+    <!-- PRICING PREVIEW -->
+    <section class="section section-tinted">
+      <div class="container">
+        <div class="section-header fade-up">
+          <div class="section-label"><i data-lucide="layers"></i> Pricing</div>
+          <h2 class="section-title">Start Free, <span class="highlight">Unlock More</span></h2>
+          <p class="section-subtitle">A generous free tier to get started. Unlock the full power of AI features when you're ready.</p>
+        </div>
+        <div class="pricing-grid">
+          <!-- Starter -->
+          <div class="pricing-card fade-up fade-up-delay-1">
+            <div class="pricing-tier">
+              <div class="pricing-tier-icon starter"><i data-lucide="seedling"></i></div>
+              <span class="pricing-tier-name">Starter</span>
+            </div>
+            <div class="pricing-price">Free</div>
+            <div class="pricing-price-note">Forever free</div>
+            <p class="pricing-desc">Perfect for exploring the app and building your first collections.</p>
+            <div class="pricing-divider"></div>
+            <ul class="pricing-features">
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>3 collections</li>
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>100 concepts per collection</li>
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>3 AI mnemonic images (lifetime)</li>
+              <li class="pricing-feature muted"><span class="cross"><i data-lucide="x"></i></span>AI collection generation</li>
+              <li class="pricing-feature muted"><span class="cross"><i data-lucide="x"></i></span>AI context &amp; related words</li>
+              <li class="pricing-feature muted"><span class="cross"><i data-lucide="x"></i></span>OCR note import</li>
+            </ul>
+            <a class="btn btn-outline" href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta">Join Beta Free</a>
+          </div>
+          <!-- Achiever -->
+          <div class="pricing-card featured fade-up fade-up-delay-2">
+            <span class="pricing-popular-badge">Most Popular</span>
+            <div class="pricing-tier">
+              <div class="pricing-tier-icon achiever"><i data-lucide="zap"></i></div>
+              <span class="pricing-tier-name">Achiever</span>
+            </div>
+            <div class="pricing-price">Coming Soon</div>
+            <div class="pricing-price-note">Early bird pricing for beta testers</div>
+            <p class="pricing-desc">For dedicated learners who want AI to supercharge their study sessions.</p>
+            <div class="pricing-divider"></div>
+            <ul class="pricing-features">
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>Unlimited collections</li>
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>300 concepts per collection</li>
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>10 AI mnemonic images / month</li>
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>3 AI collection generations / month</li>
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>10 AI context requests / month</li>
+              <li class="pricing-feature muted"><span class="cross"><i data-lucide="x"></i></span>OCR note import</li>
+            </ul>
+            <a class="btn btn-primary" href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta for early pricing">Get Early Access</a>
+          </div>
+          <!-- Pioneer -->
+          <div class="pricing-card fade-up fade-up-delay-3">
+            <div class="pricing-tier">
+              <div class="pricing-tier-icon pioneer"><i data-lucide="rocket"></i></div>
+              <span class="pricing-tier-name">Pioneer</span>
+            </div>
+            <div class="pricing-price">Coming Soon</div>
+            <div class="pricing-price-note">Early bird pricing for beta testers</div>
+            <p class="pricing-desc">For power users who want the full AI arsenal with no limits.</p>
+            <div class="pricing-divider"></div>
+            <ul class="pricing-features">
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>Unlimited collections</li>
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>Unlimited concepts</li>
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>200 AI mnemonic images / month</li>
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>100 AI collection generations / month</li>
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>1000 AI context requests / month</li>
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>50 OCR note imports / month</li>
+            </ul>
+            <a class="btn btn-outline" href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta for early pricing">Get Early Access</a>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:28px;">
+          <a href="./pricing" class="btn btn-sm btn-outline">
+            <i data-lucide="table"></i> See Full Feature Comparison
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BAND -->
+    <section class="cta-band">
+      <div class="container center">
+        <h2>Ready to Make Learning <span style="color:var(--highlight)">Unforgettable?</span></h2>
+        <p>Join the mnemonic revolution. Your brain is ready for something better than plain repetition.</p>
+        <a class="btn btn-highlight btn-lg" href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta&body=Hi! I'm interested in joining the ASHapp beta test.">
+          <i data-lucide="mail"></i> Join the Beta Today
+        </a>
+      </div>
+    </section>
+
+    <!-- FEEDBACK -->
+    <section class="section section-alt feedback-section">
+      <div class="container center">
+        <div class="section-label" style="margin:0 auto 16px;"><i data-lucide="lightbulb"></i> Your Ideas Matter</div>
+        <h2 class="section-title">Help Shape <span class="highlight">ASHapp</span></h2>
+        <p class="feedback-text">
+          Have a feature idea that could make ASHapp even better? Every piece of feedback directly shapes the development roadmap.
+        </p>
+        <a class="btn btn-primary" href="mailto:admin@ashapp.pl?subject=Feature Request for ASHapp&body=Hi!%0D%0A%0D%0AI would love to see in ASHapp the following feature...%0D%0A%0D%0ABecause...%0D%0A%0D%0AThanks for building such an amazing learning tool!">
+          <i data-lucide="send"></i> Share Your Idea
+        </a>
+      </div>
+    </section>
+
+    <!-- PIG -->
+    <div class="pig-section section-alt">
+      <div class="container center">
+        <div class="pig-animation-container">
+          <lottie-player
+            src="./assets/images/Cute pig.json"
+            background="transparent"
+            speed="1"
+            style="width:180px;height:180px;"
+            loop autoplay>
+          </lottie-player>
+        </div>
+        <p class="pig-note">Because learning should be as delightful as this little pig!</p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand-col">
           <a class="brand" href="./">
             <span class="brand-ash">ASH</span><span class="brand-app">app</span>
           </a>
+          <p class="footer-tagline">AI flashcards with mnemonics for faster, deeper learning.</p>
         </div>
-                         <nav class="footer-nav">
-          <a href="./mnemonics">Mnemonics</a>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="#features">Features</a>
+          <a href="./pricing">Pricing</a>
+          <a href="./mnemonics">Why Mnemonics?</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
           <a href="./privacy">Privacy Policy</a>
           <a href="./terms">Terms of Service</a>
           <a href="./delete-account">Delete Account</a>
-        </nav>
-        <div class="footer-copy">© <span id="y"></span> ASHapp</div>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="mailto:admin@ashapp.pl">admin@ashapp.pl</a>
+          <a href="mailto:privacy@ashapp.pl">privacy@ashapp.pl</a>
+        </div>
       </div>
-    </footer>
+      <div class="footer-bottom">
+        <span class="footer-copy">© <span id="y"></span> ASHapp. All rights reserved.</span>
+        <span class="footer-contact"><a href="mailto:admin@ashapp.pl">admin@ashapp.pl</a></span>
+      </div>
+    </div>
+  </footer>
 
-    <script src="./script.js"></script>
-  </body>
-  </html>
-
-
+  <script src="./script.js"></script>
+</body>
+</html>

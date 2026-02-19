@@ -1,71 +1,117 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ASHapp – Terms of Service</title>
-    <link rel="icon" type="image/svg+xml" href="./assets/images/pig.svg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Righteous&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <!-- Beta Banner -->
-    <div class="beta-banner">
-      <div class="container">
-        <span class="beta-text">ASHapp is currently in beta test</span>
-      </div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ASHapp – Terms of Service</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/images/pig.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Righteous&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+  <!-- Beta Banner -->
+  <div class="beta-banner">
+    <div class="container">
+      <span class="beta-text">ASHapp is currently in beta — <a href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta" style="color:inherit;text-decoration:underline;">join the beta now</a></span>
     </div>
+  </div>
 
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="./">
-          <span class="brand-ash">ASH</span><span class="brand-app">app</span>
-        </a>
-        <nav class="nav">
-          <a href="./mnemonics">Mnemonics</a>
-          <a href="./privacy">Privacy</a>
-          <a class="active" href="./terms">Terms</a>
-        </nav>
-        <button class="nav-toggle" aria-label="Open menu">☰</button>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./">
+        <span class="brand-ash">ASH</span><span class="brand-app">app</span>
+      </a>
+      <nav class="nav">
+        <a href="./#features">Features</a>
+        <a href="./pricing">Pricing</a>
+        <a href="./mnemonics">Mnemonics</a>
+        <a class="active" href="./terms">Terms</a>
+        <a class="nav-cta" href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta">Join Beta</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="nav-overlay" id="navOverlay"></div>
+  <div class="nav-drawer" id="navDrawer">
+    <div class="drawer-header">
+      <a class="brand" href="./">
+        <span class="brand-ash">ASH</span><span class="brand-app">app</span>
+      </a>
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <nav class="drawer-nav">
+      <a href="./#features"><i data-lucide="sparkles"></i>Features</a>
+      <a href="./pricing"><i data-lucide="layers"></i>Pricing</a>
+      <a href="./mnemonics"><i data-lucide="brain"></i>Mnemonics</a>
+      <div class="drawer-divider"></div>
+      <a href="./privacy"><i data-lucide="shield"></i>Privacy Policy</a>
+      <a href="./terms" class="active"><i data-lucide="file-text"></i>Terms of Service</a>
+    </nav>
+    <div class="drawer-cta">
+      <a class="btn btn-primary" style="width:100%;justify-content:center;" href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta">
+        <i data-lucide="mail"></i> Join Beta
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <section class="page-hero terms-hero">
+      <div class="container center">
+        <h1>Terms of Service</h1>
+        <p>This is a concise web version; the full in-app terms control in case of differences.</p>
       </div>
-    </header>
+    </section>
 
-    <main>
-      <section class="page-hero terms-hero">
-        <div class="container center">
-          <h1>Terms of Service</h1>
-          <p>This is a concise web version; the full in-app terms control in case of differences.</p>
-        </div>
-      </section>
+    <section class="section">
+      <div class="container doc">
+        <div id="terms-content"></div>
+      </div>
+    </section>
+  </main>
 
-      <section class="section">
-        <div class="container doc">
-          <div id="terms-content"></div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <div class="footer-brand">
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand-col">
           <a class="brand" href="./">
             <span class="brand-ash">ASH</span><span class="brand-app">app</span>
           </a>
+          <p class="footer-tagline">AI flashcards with mnemonics for faster, deeper learning.</p>
         </div>
-        <nav class="footer-nav">
-          <a href="./mnemonics">Mnemonics</a>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="./#features">Features</a>
+          <a href="./pricing">Pricing</a>
+          <a href="./mnemonics">Why Mnemonics?</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
           <a href="./privacy">Privacy Policy</a>
           <a href="./terms">Terms of Service</a>
           <a href="./delete-account">Delete Account</a>
-        </nav>
-        <div class="footer-copy">© <span id="y"></span> ASHapp</div>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="mailto:admin@ashapp.pl">admin@ashapp.pl</a>
+          <a href="mailto:privacy@ashapp.pl">privacy@ashapp.pl</a>
+        </div>
       </div>
-    </footer>
+      <div class="footer-bottom">
+        <span class="footer-copy">© <span id="y"></span> ASHapp. All rights reserved.</span>
+        <span class="footer-contact"><a href="mailto:admin@ashapp.pl">admin@ashapp.pl</a></span>
+      </div>
+    </div>
+  </footer>
 
-    <script src="./script.js"></script>
-  </body>
-  </html>
-
-
+  <script src="./script.js"></script>
+</body>
+</html>
