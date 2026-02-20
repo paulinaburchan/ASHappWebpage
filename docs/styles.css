@@ -733,7 +733,7 @@ h1, h2, h3, h4, h5 { line-height: 1.15; font-weight: 700; }
 }
 .footer-brand-col .brand { color: var(--white); margin-bottom: 10px; display: inline-block; }
 .footer-brand-col .brand-ash { color: var(--white); }
-.footer-brand-col .brand-app { color: var(--highlight); }
+.footer-brand-col .brand-app { color: var(--pink); }
 .footer-tagline { font-size: 0.9rem; color: rgba(255,255,255,0.55); max-width: 24ch; line-height: 1.6; margin-top: 8px; }
 .footer-col h4 {
   font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
@@ -960,3 +960,12 @@ h1, h2, h3, h4, h5 { line-height: 1.15; font-weight: 700; }
 
 /* Utility: visually hidden (accessibility) */
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+
+/* Free badge on Starter pricing card */
+.pricing-free-badge {
+  display: inline-flex; align-items: center;
+  background: rgba(46,89,70,0.1); color: var(--green);
+  font-size: 11px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.4px; padding: 3px 9px; border-radius: var(--radius-full);
+  margin-left: 10px; vertical-align: middle;
+}

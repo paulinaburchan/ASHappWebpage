@@ -56,21 +56,24 @@ document.getElementById('y').textContent = new Date().getFullYear();
   els.forEach(function (el) { obs.observe(el); });
 })();
 
-// ─── FAQ accordion ───────────────────────────────────────────────────────────
+// ─── FAQ accordion (handles any .faq-list container) ─────────────────────────
 (function () {
-  var faqList = document.getElementById('faqList');
-  if (!faqList) return;
-  faqList.querySelectorAll('.faq-item').forEach(function (item) {
-    var btn = item.querySelector('.faq-question');
-    if (!btn) return;
-    btn.addEventListener('click', function () {
-      var isOpen = item.classList.contains('open');
-      // Close all others
-      faqList.querySelectorAll('.faq-item.open').forEach(function (o) {
-        o.classList.remove('open');
+  function initFaqList(faqList) {
+    faqList.querySelectorAll('.faq-item').forEach(function (item) {
+      var btn = item.querySelector('.faq-question');
+      if (!btn) return;
+      btn.addEventListener('click', function () {
+        var isOpen = item.classList.contains('open');
+        faqList.querySelectorAll('.faq-item.open').forEach(function (o) {
+          o.classList.remove('open');
+        });
+        if (!isOpen) item.classList.add('open');
       });
-      if (!isOpen) item.classList.add('open');
     });
+  }
+  ['faqList', 'homeFaqList'].forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el) initFaqList(el);
   });
 })();
 

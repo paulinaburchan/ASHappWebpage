@@ -31,11 +31,9 @@
 
   <!-- Language Alternatives -->
   <link rel="alternate" hreflang="en" href="https://ashapp.pl/" />
-  <link rel="alternate" hreflang="de" href="https://ashapp.pl/" />
-  <link rel="alternate" hreflang="es" href="https://ashapp.pl/" />
-  <link rel="alternate" hreflang="pl" href="https://ashapp.pl/" />
   <link rel="alternate" hreflang="x-default" href="https://ashapp.pl/" />
 
+  <link rel="manifest" href="./manifest.json">
   <link rel="icon" type="image/svg+xml" href="./assets/images/pig.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,18 +42,102 @@
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
-  <!-- Structured Data -->
+  <!-- Structured Data: MobileApplication -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
+    "@type": "MobileApplication",
     "name": "ASHapp",
-    "applicationCategory": "EducationalApplication",
+    "applicationCategory": "EducationApplication",
+    "operatingSystem": "Android",
+    "description": "AI flashcard app that generates mnemonic images and visual associations to accelerate language learning and concept memorisation. Features OCR note import, AI concept generation, typing mode with fuzzy matching, and multilingual support.",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-    "operatingSystem": "Android, iOS",
-    "description": "AI-powered flashcards app with mnemonics and visual associations for accelerated learning.",
+    "featureList": [
+      "AI mnemonic image generation",
+      "OCR note-to-flashcard import",
+      "AI concept collection generation",
+      "Typing mode with fuzzy matching",
+      "Multilingual learning support",
+      "AI context enrichment and related words",
+      "Flashcard learning mode",
+      "Collection sharing"
+    ],
     "url": "https://ashapp.pl",
-    "creator": { "@type": "Person", "name": "ASHapp Developer" }
+    "inLanguage": ["en", "pl", "es", "de"],
+    "publisher": { "@type": "Organization", "name": "ASHapp", "url": "https://ashapp.pl" }
+  }
+  </script>
+  <!-- Structured Data: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ASHapp",
+    "url": "https://ashapp.pl",
+    "logo": "https://ashapp.pl/assets/images/logo.svg",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "admin@ashapp.pl",
+      "contactType": "customer support"
+    },
+    "sameAs": []
+  }
+  </script>
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What makes ASHapp different from Anki?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Unlike Anki, ASHapp uses AI to automatically generate visual mnemonic images for each concept — turning abstract ideas into vivid, memorable pictures. It also generates full flashcard collections from a topic description, imports handwritten notes via OCR, and enriches every card with AI-written context, example sentences, synonyms, and antonyms. Anki is a blank canvas; ASHapp does the heavy lifting for you."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does AI mnemonic image generation work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "When you tap the mnemonic button on a flashcard, ASHapp's AI analyses the concept and generates a bizarre, vivid image that visually encodes a memory association. The image is unique to your concept and designed to exploit the brain's preference for unusual visuals over plain text. Images are generated via DALL-E 3 and stored in your account."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use ASHapp to learn multiple languages at the same time?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. ASHapp supports multilingual learning with no restrictions. You can create separate collections for different languages, switch between them freely, and even mix languages within a single study session. The app interface is available in English, Polish, Spanish, and German."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is ASHapp free to use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The Starter plan is completely free with no credit card required. It gives you 3 collections, up to 100 concepts per collection, and 3 lifetime AI mnemonic images to try the core feature. Paid plans (Achiever and Pioneer) unlock more AI features and higher limits and will be available via Google Play."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a mnemonic and why does it help learning?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A mnemonic is a mental trick — often a vivid image, story, or association — that links new information to something already in your memory. Research shows that mnemonic techniques can improve recall by up to 72% compared to plain repetition, because the human brain encodes visual and emotional information far more reliably than abstract text. ASHapp automates this process using AI."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I import my handwritten notes into ASHapp?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, with the Pioneer plan. ASHapp's OCR feature lets you photograph a page of notes, a textbook page, or a handwritten vocabulary list. The AI reads the image and automatically creates multiple flashcard concepts from the extracted text — not one word at a time, but intelligently splitting the content into individual learnable items."
+        }
+      }
+    ]
   }
   </script>
 </head>
@@ -127,7 +209,7 @@
             The only flashcard app that uses AI to <strong>visualize your wildest mental associations</strong> — because your brain remembers the bizarre far better than the boring.
           </p>
           <div class="hero-ctas">
-            <div class="btn-play" role="button" aria-label="Coming soon to Google Play">
+            <div class="btn-play" aria-hidden="true">
               <i data-lucide="play-circle" class="play-icon"></i>
               <div class="btn-play-text">
                 <small>Coming to</small>
@@ -260,66 +342,45 @@
         </div>
         <div class="features-grid">
           <div class="feature-card fade-up fade-up-delay-1">
-            <div class="feature-icon-wrap"><i data-lucide="target"></i></div>
-            <div>
-              <h3>Personal Goals</h3>
-              <p>Set a learning goal that fits your schedule — per day, week, or month. Adjust anytime. The app adapts to your pace, never making you feel overwhelmed.</p>
-            </div>
-          </div>
-          <div class="feature-card fade-up fade-up-delay-2">
-            <div class="feature-icon-wrap"><i data-lucide="folder-open"></i></div>
-            <div>
-              <h3>Collections</h3>
-              <p>Organise concepts into collections for any subject or language. Don't want to start from scratch? Let AI generate a full collection for you in seconds.</p>
-            </div>
-          </div>
-          <div class="feature-card fade-up fade-up-delay-3">
             <div class="feature-icon-wrap"><i data-lucide="wand-2"></i></div>
             <div>
               <h3>Mnemonics Boost</h3>
               <p>Our AI visualizes your mental associations to make concepts stick like never before. Bizarre, vivid, unforgettable — that's how your brain loves to learn.</p>
             </div>
           </div>
-          <div class="feature-card fade-up fade-up-delay-1">
-            <div class="feature-icon-wrap"><i data-lucide="brain-circuit"></i></div>
-            <div>
-              <h3>Smart Flashcard</h3>
-              <p>Each flashcard is enriched with AI-generated context, example sentences, synonyms, and antonyms. The system adapts to your performance for optimal retention.</p>
-            </div>
-          </div>
           <div class="feature-card fade-up fade-up-delay-2">
-            <div class="feature-icon-wrap"><i data-lucide="flame"></i></div>
+            <div class="feature-icon-wrap"><i data-lucide="sparkles"></i></div>
             <div>
-              <h3>Daily Streak</h3>
-              <p>Watch your streak grow day by day. Gentle reminders keep you on track without pressure — every small win is celebrated along the way.</p>
+              <h3>AI Concept Generation</h3>
+              <p>Don't build your collection from scratch — let AI do the heavy lifting. Describe a topic and ASHapp generates a ready-to-study set of concepts with definitions, examples, and context in seconds.</p>
             </div>
           </div>
           <div class="feature-card fade-up fade-up-delay-3">
-            <div class="feature-icon-wrap"><i data-lucide="share-2"></i></div>
-            <div>
-              <h3>Share Collections</h3>
-              <p>Share your collections with friends, classmates, or teammates. Learn together, challenge each other, and build a community of knowledge seekers.</p>
-            </div>
-          </div>
-          <div class="feature-card fade-up fade-up-delay-1">
             <div class="feature-icon-wrap"><i data-lucide="scan-text"></i></div>
             <div>
               <h3>Smart OCR Import</h3>
               <p>Photograph your notes and watch the magic happen. ASHapp's AI converts entire pages into multiple flashcard concepts in seconds — not one word at a time like other apps.</p>
             </div>
           </div>
+          <div class="feature-card fade-up fade-up-delay-1">
+            <div class="feature-icon-wrap"><i data-lucide="brain-circuit"></i></div>
+            <div>
+              <h3>Flashcard Learning Mode</h3>
+              <p>Each flashcard is enriched with AI-generated context, example sentences, synonyms, and antonyms — giving you everything you need to understand a concept, not just memorise it.</p>
+            </div>
+          </div>
           <div class="feature-card fade-up fade-up-delay-2">
+            <div class="feature-icon-wrap"><i data-lucide="pencil-line"></i></div>
+            <div>
+              <h3>Typing Mode</h3>
+              <p>Practice writing with intelligent fuzzy matching — minor typos won't count against you. Build confidence naturally while the algorithm focuses on real understanding.</p>
+            </div>
+          </div>
+          <div class="feature-card fade-up fade-up-delay-3">
             <div class="feature-icon-wrap"><i data-lucide="globe"></i></div>
             <div>
               <h3>Multilingual Learning</h3>
               <p>Master multiple languages simultaneously. Switch between languages effortlessly and build a truly polyglot learning experience with no limits.</p>
-            </div>
-          </div>
-          <div class="feature-card fade-up fade-up-delay-3">
-            <div class="feature-icon-wrap"><i data-lucide="pencil-line"></i></div>
-            <div>
-              <h3>Smart Writing Mode</h3>
-              <p>Practice writing with intelligent fuzzy matching — minor typos won't count against you. Build confidence naturally while the algorithm focuses on real understanding.</p>
             </div>
           </div>
         </div>
@@ -363,12 +424,10 @@
           <!-- Starter -->
           <div class="pricing-card fade-up fade-up-delay-1">
             <div class="pricing-tier">
-              <div class="pricing-tier-icon starter"><i data-lucide="seedling"></i></div>
-              <span class="pricing-tier-name">Starter</span>
+              <div class="pricing-tier-icon starter"><i data-lucide="leaf"></i></div>
+              <span class="pricing-tier-name">Starter <span class="pricing-free-badge">Free</span></span>
             </div>
-            <div class="pricing-price">Free</div>
-            <div class="pricing-price-note">Forever free</div>
-            <p class="pricing-desc">Perfect for exploring the app and building your first collections.</p>
+            <p class="pricing-desc">No credit card needed. Get started, build your first collections, and feel the power of mnemonic learning.</p>
             <div class="pricing-divider"></div>
             <ul class="pricing-features">
               <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>3 collections</li>
@@ -378,17 +437,14 @@
               <li class="pricing-feature muted"><span class="cross"><i data-lucide="x"></i></span>AI context &amp; related words</li>
               <li class="pricing-feature muted"><span class="cross"><i data-lucide="x"></i></span>OCR note import</li>
             </ul>
-            <a class="btn btn-outline" href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta">Join Beta Free</a>
+            <a class="btn btn-outline" href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta&body=Hi!%0D%0A%0D%0AI would like to join the ASHapp beta and start with the free Starter plan.%0D%0A%0D%0AThanks!">Join Beta Free</a>
           </div>
           <!-- Achiever -->
-          <div class="pricing-card featured fade-up fade-up-delay-2">
-            <span class="pricing-popular-badge">Most Popular</span>
+          <div class="pricing-card fade-up fade-up-delay-2">
             <div class="pricing-tier">
               <div class="pricing-tier-icon achiever"><i data-lucide="zap"></i></div>
               <span class="pricing-tier-name">Achiever</span>
             </div>
-            <div class="pricing-price">Coming Soon</div>
-            <div class="pricing-price-note">Early bird pricing for beta testers</div>
             <p class="pricing-desc">For dedicated learners who want AI to supercharge their study sessions.</p>
             <div class="pricing-divider"></div>
             <ul class="pricing-features">
@@ -399,16 +455,14 @@
               <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>10 AI context requests / month</li>
               <li class="pricing-feature muted"><span class="cross"><i data-lucide="x"></i></span>OCR note import</li>
             </ul>
-            <a class="btn btn-primary" href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta for early pricing">Get Early Access</a>
+            <a class="btn btn-outline" href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta - Achiever plan&body=Hi!%0D%0A%0D%0AI'm interested in the Achiever plan and would like to join the beta.%0D%0A%0D%0AThanks!">Get Early Access</a>
           </div>
           <!-- Pioneer -->
-          <div class="pricing-card fade-up fade-up-delay-3">
+          <div class="pricing-card featured fade-up fade-up-delay-3">
             <div class="pricing-tier">
               <div class="pricing-tier-icon pioneer"><i data-lucide="rocket"></i></div>
               <span class="pricing-tier-name">Pioneer</span>
             </div>
-            <div class="pricing-price">Coming Soon</div>
-            <div class="pricing-price-note">Early bird pricing for beta testers</div>
             <p class="pricing-desc">For power users who want the full AI arsenal with no limits.</p>
             <div class="pricing-divider"></div>
             <ul class="pricing-features">
@@ -419,13 +473,92 @@
               <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>1000 AI context requests / month</li>
               <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>50 OCR note imports / month</li>
             </ul>
-            <a class="btn btn-outline" href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta for early pricing">Get Early Access</a>
+            <a class="btn btn-primary" href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta - Pioneer plan&body=Hi!%0D%0A%0D%0AI'm interested in the Pioneer plan and would like to join the beta.%0D%0A%0D%0AThanks!">Get Early Access</a>
           </div>
         </div>
         <div style="text-align:center;margin-top:28px;">
           <a href="./pricing" class="btn btn-sm btn-outline">
             <i data-lucide="table"></i> See Full Feature Comparison
           </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-tinted" id="faq">
+      <div class="container" style="max-width:800px;">
+        <div class="section-header fade-up">
+          <div class="section-label"><i data-lucide="help-circle"></i> FAQ</div>
+          <h2 class="section-title">Common <span class="highlight">Questions</span></h2>
+          <p class="section-subtitle">Everything you need to know before you start learning.</p>
+        </div>
+        <div id="homeFaqList" class="faq-list fade-up">
+          <div class="faq-item">
+            <button class="faq-question">
+              What makes ASHapp different from Anki?
+              <i data-lucide="plus" class="faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Unlike Anki, ASHapp uses AI to automatically generate <strong>visual mnemonic images</strong> for each concept — turning abstract ideas into vivid, memorable pictures. It also generates full flashcard collections from a topic description, imports handwritten notes via OCR, and enriches every card with AI-written context, example sentences, synonyms, and antonyms. Anki is a blank canvas; ASHapp does the heavy lifting for you.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              How does AI mnemonic image generation work?
+              <i data-lucide="plus" class="faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                When you tap the mnemonic button on a flashcard, ASHapp's AI analyses the concept and generates a bizarre, vivid image that visually encodes a memory association. The image is unique to your concept and designed to exploit the brain's preference for unusual visuals over plain text. Images are generated via DALL-E 3 and stored in your account.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Can I use ASHapp to learn multiple languages at the same time?
+              <i data-lucide="plus" class="faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes. ASHapp supports multilingual learning with no restrictions. You can create separate collections for different languages, switch between them freely, and even mix languages within a single study session. The app interface is available in English, Polish, Spanish, and German.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Is ASHapp free to use?
+              <i data-lucide="plus" class="faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes. The <strong>Starter plan is completely free</strong> with no credit card required. It gives you 3 collections, up to 100 concepts per collection, and 3 lifetime AI mnemonic images to try the core feature. Paid plans (Achiever and Pioneer) unlock more AI features and higher limits and will be available via Google Play.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              What is a mnemonic and why does it help learning?
+              <i data-lucide="plus" class="faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                A mnemonic is a mental trick — often a vivid image, story, or association — that links new information to something already in your memory. Research shows mnemonic techniques can improve recall by up to 72% compared to plain repetition, because the human brain encodes visual and emotional information far more reliably than abstract text. ASHapp automates this process using AI. <a href="./mnemonics" style="color:var(--green);font-weight:600;">Read the science →</a>
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Can I import my handwritten notes into ASHapp?
+              <i data-lucide="plus" class="faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes, with the Pioneer plan. ASHapp's OCR feature lets you photograph a page of notes, a textbook page, or a handwritten vocabulary list. The AI reads the image and automatically creates multiple flashcard concepts from the extracted text — not one word at a time, but intelligently splitting the content into individual learnable items.
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -502,7 +635,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span class="footer-copy">© <span id="y"></span> ASHapp. All rights reserved.</span>
+        <span class="footer-copy">© <span id="y"></span> ASHapp.</span>
         <span class="footer-contact"><a href="mailto:admin@ashapp.pl">admin@ashapp.pl</a></span>
       </div>
     </div>

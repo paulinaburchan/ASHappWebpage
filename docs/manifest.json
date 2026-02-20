@@ -1,0 +1,20 @@
+{
+  "name": "ASHapp – AI Flashcards with Mnemonics",
+  "short_name": "ASHapp",
+  "description": "AI flashcard app that generates mnemonic images and visual associations to accelerate language learning and concept memorisation.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#EAF1ED",
+  "theme_color": "#2E5946",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "./assets/images/pig.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "productivity", "utilities"],
+  "screenshots": []
+}
