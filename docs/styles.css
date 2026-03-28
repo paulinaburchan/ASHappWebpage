@@ -327,7 +327,7 @@ h1, h2, h3, h4, h5 { line-height: 1.15; font-weight: 700; }
   background: radial-gradient(ellipse, rgba(46,89,70,0.15) 0%, transparent 70%);
 }
 .phone {
-  width: 240px;
+  width: min(292px, 86vw);
   background: #0f1117;
   border-radius: 36px;
   padding: 14px 12px;
@@ -346,7 +346,7 @@ h1, h2, h3, h4, h5 { line-height: 1.15; font-weight: 700; }
   background: var(--white);
   border-radius: 24px;
   overflow: hidden;
-  min-height: 400px;
+  min-height: 0;
   display: flex; flex-direction: column;
 }
 .phone-app-bar {
@@ -364,33 +364,52 @@ h1, h2, h3, h4, h5 { line-height: 1.15; font-weight: 700; }
   padding: 4px 9px; border-radius: var(--radius-full);
 }
 .phone-streak [data-lucide] { width: 12px; height: 12px; }
-.phone-card-wrap { flex: 1; padding: 14px 12px 10px; background: var(--bg); }
+.phone-card-wrap { flex: 1; padding: 12px 10px 10px; background: var(--bg); }
 .phone-card-label {
   font-size: 10px; font-weight: 700; text-transform: uppercase;
   letter-spacing: 0.5px; color: var(--text-muted);
-  margin-bottom: 10px; text-align: center;
+  margin-bottom: 8px; text-align: center;
 }
 .phone-flashcard {
   background: var(--white);
   border-radius: 16px;
-  padding: 16px 14px;
+  padding: 12px 10px;
   box-shadow: var(--shadow);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 .phone-word {
   font-size: 20px; font-weight: 700;
   color: var(--green); text-align: center;
   margin-bottom: 4px;
 }
+.phone-word-ko {
+  font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  font-size: clamp(19px, 5.5vw, 22px);
+  font-weight: 700;
+  line-height: 1.25;
+}
+.phone-roma {
+  font-size: 10px; font-weight: 600;
+  color: var(--text-light);
+  text-align: center;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
 .phone-translation {
-  font-size: 12px; color: var(--text-muted);
-  text-align: center; margin-bottom: 12px;
+  font-size: 11px; color: var(--text-muted);
+  text-align: center; margin-bottom: 10px;
+  line-height: 1.35;
+  padding: 0 2px;
 }
 .phone-mnemonic {
   background: linear-gradient(135deg, rgba(255,142,83,0.08), rgba(234,89,110,0.08));
   border-radius: var(--radius-sm);
   padding: 10px 10px;
   border-left: 3px solid var(--highlight);
+}
+.phone-mnemonic-compact {
+  padding: 8px 8px;
+  margin-bottom: 0;
 }
 .phone-mnemonic-label {
   font-size: 9px; font-weight: 700; text-transform: uppercase;
@@ -399,15 +418,38 @@ h1, h2, h3, h4, h5 { line-height: 1.15; font-weight: 700; }
 }
 .phone-mnemonic-label [data-lucide] { width: 9px; height: 9px; }
 .phone-mnemonic-text {
-  font-size: 11px; color: #374151; line-height: 1.5;
-  font-style: italic;
+  font-size: 10px; color: #374151; line-height: 1.45;
+  font-style: normal;
+}
+.phone-visual-block {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid var(--gray-100);
+}
+.phone-visual-label {
+  font-size: 8px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.45px;
+  color: var(--highlight);
+  margin-bottom: 6px;
+  display: flex; align-items: center; gap: 4px;
+}
+.phone-visual-label [data-lucide] { width: 9px; height: 9px; }
+.phone-visual-img {
+  width: 100%;
+  height: auto;
+  max-height: 148px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  display: block;
+  border: 1px solid rgba(46, 89, 70, 0.08);
 }
 .phone-btns {
   display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
 }
 .phone-btn {
-  padding: 10px; border-radius: 12px;
-  font-size: 13px; font-weight: 700; text-align: center;
+  padding: 9px 8px; border-radius: 12px;
+  font-size: 12px; font-weight: 700; text-align: center;
   display: flex; align-items: center; justify-content: center; gap: 5px;
 }
 .phone-btn [data-lucide] { width: 14px; height: 14px; }
@@ -938,6 +980,14 @@ h1, h2, h3, h4, h5 { line-height: 1.15; font-weight: 700; }
   .nav { display: flex; }
   .nav-toggle { display: none; }
   .hero-inner { grid-template-columns: 1.15fr 1fr; gap: 60px; }
+  .phone {
+    width: 308px;
+    padding: 16px 14px;
+    border-radius: 40px;
+  }
+  .phone-notch { margin-bottom: 12px; }
+  .phone-visual-img { max-height: 168px; }
+  .phone-word-ko { font-size: 24px; }
   .features-grid { grid-template-columns: repeat(3, 1fr); }
   .pricing-grid { grid-template-columns: repeat(3, 1fr); }
   .creator-inner { grid-template-columns: 2fr 1fr; gap: 64px; }
