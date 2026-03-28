@@ -724,39 +724,39 @@ h1, h2, h3, h4, h5 { line-height: 1.15; font-weight: 700; }
 
 /* === 19. FOOTER === */
 .site-footer {
-  background: var(--green-dark);
-  color: rgba(255,255,255,0.85);
+  background: var(--white);
+  color: var(--text);
   padding: clamp(40px, 6vw, 64px) 0 28px;
+  border-top: 1px solid var(--gray-200);
 }
 .footer-inner {
   display: grid; gap: 40px;
 }
-.footer-brand-col .brand { color: var(--white); margin-bottom: 10px; display: inline-block; }
-.footer-brand-col .brand-ash { color: var(--white); }
-.footer-brand-col .brand-app { color: var(--pink); }
-.footer-tagline { font-size: 0.9rem; color: rgba(255,255,255,0.55); max-width: 24ch; line-height: 1.6; margin-top: 8px; }
+/* Logo uses global .brand-ash / .brand-app (green + pink) — do not override here */
+.footer-brand-col .brand { margin-bottom: 10px; display: inline-block; }
+.footer-tagline { font-size: 0.9rem; color: var(--text-muted); max-width: 28ch; line-height: 1.6; margin-top: 8px; }
 .footer-col h4 {
   font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
-  letter-spacing: 0.8px; color: rgba(255,255,255,0.5);
+  letter-spacing: 0.8px; color: var(--green);
   margin-bottom: 14px;
 }
 .footer-col a {
-  display: block; color: rgba(255,255,255,0.75);
+  display: block; color: var(--text);
   font-size: 0.9rem; font-weight: 500;
   padding: 4px 0;
   transition: color var(--t);
 }
-.footer-col a:hover { color: var(--highlight); }
+.footer-col a:hover { color: var(--highlight-dark); }
 .footer-bottom {
   display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
   gap: 10px;
   margin-top: 40px;
   padding-top: 20px;
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid var(--gray-200);
 }
-.footer-copy { font-size: 0.85rem; color: rgba(255,255,255,0.4); }
-.footer-contact a { color: rgba(255,255,255,0.55); font-size: 0.85rem; transition: color var(--t); }
-.footer-contact a:hover { color: var(--highlight); }
+.footer-copy { font-size: 0.85rem; color: var(--text-muted); }
+.footer-contact a { color: var(--green); font-size: 0.85rem; font-weight: 600; transition: color var(--t); }
+.footer-contact a:hover { color: var(--highlight-dark); }
 
 /* === 20. PAGE HERO (inner pages) === */
 .page-hero {
