@@ -310,7 +310,7 @@ if (terms) {
         <li><strong>Data Encryption:</strong> Data is encrypted in transit and at rest using industry-standard protocols</li>
         <li><strong>EU Compliance:</strong> AWS infrastructure is located in the European Union to ensure GDPR compliance</li>
         <li><strong>Access Control:</strong> Strict access controls limit who can access your data</li>
-        <li><strong>Regular Backups:</strong> Your data is regularly backed up to prevent loss</li>
+        <li><strong>Reliable cloud storage:</strong> Your data is stored on AWS in the European Union using managed services (databases, authentication, and file storage) engineered for durability, redundancy, and high availability</li>
       </ul>
     </div>
 

@@ -66,6 +66,48 @@ h1, h2, h3, h4, h5 { line-height: 1.15; font-weight: 700; }
 .brand-ash { color: var(--green); }
 .brand-app { color: var(--pink); }
 .highlight { color: var(--highlight); font-weight: 700; }
+
+/* Brand slogan — same word colors as app logo (ASH green + app pink) */
+.brand-slogan {
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  font-weight: 500;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+.brand-slogan .slogan-start {
+  color: var(--green);
+  font-weight: 700;
+}
+.brand-slogan .slogan-assoc {
+  color: var(--pink);
+  font-weight: 700;
+}
+.hero-slogan {
+  margin-top: -6px;
+  margin-bottom: 18px;
+  max-width: 52ch;
+}
+/* CTA band sits on solid green — light mint + pink for contrast */
+.cta-band .brand-slogan {
+  font-size: clamp(1.5rem, 4vw, 2.35rem);
+  font-weight: 600;
+  color: rgba(255,255,255,0.92);
+  margin-bottom: 14px;
+  line-height: 1.25;
+}
+.cta-band .brand-slogan .slogan-start {
+  color: #EAF1ED;
+  font-weight: 700;
+}
+.cta-band .brand-slogan .slogan-assoc {
+  color: var(--pink);
+  font-weight: 700;
+}
+.footer-tagline.brand-slogan {
+  font-size: 0.95rem;
+  margin-top: 10px;
+  line-height: 1.5;
+}
 .section-label {
   display: inline-flex; align-items: center; gap: 6px;
   background: var(--green-muted); color: var(--green);
