@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Open in ASHapp</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/svg+xml" href="./assets/images/pig.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Space Grotesk', Arial, sans-serif;
+      background: #EAF1ED;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      max-width: 420px;
+      width: 100%;
+      padding: 48px 32px;
+      text-align: center;
+    }
+    .logo { font-size: 40px; font-weight: 700; color: #2E5946; margin-bottom: 8px; }
+    .logo span { color: #EA596E; }
+    .subtitle { font-size: 16px; color: #666; margin-bottom: 32px; }
+    .cta {
+      display: inline-block;
+      width: 100%;
+      padding: 16px 24px;
+      background: #2E5946;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 16px;
+      font-family: inherit;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-bottom: 12px;
+    }
+    .cta:hover { background: #1e3d2f; }
+    .cta-secondary {
+      display: inline-block;
+      width: 100%;
+      padding: 14px 24px;
+      background: transparent;
+      color: #2E5946;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 15px;
+      border: 2px solid #2E5946;
+      transition: background 0.2s;
+    }
+    .cta-secondary:hover { background: #EAF1ED; }
+    .hint { font-size: 13px; color: #999; margin-top: 24px; line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">ASH<span>app</span></div>
+    <p class="subtitle">Opening ASHapp&hellip;</p>
+
+    <a id="store-btn" class="cta" style="display:none;"
+       href="https://play.google.com/store/apps/details?id=pl.ashapp.app">
+      Get it on Google Play
+    </a>
+    <a class="cta-secondary" href="https://ashapp.pl/">Visit ashapp.pl</a>
+
+    <p class="hint" id="hint" style="display:none;">
+      If the app didn't open, tap the button above to install it.
+    </p>
+  </div>
+
+  <script>
+    (function () {
+      var STORE_ANDROID = 'https://play.google.com/store/apps/details?id=pl.ashapp.app';
+      var TIMEOUT_MS = 1500;
+
+      // Read collectionId / collectionName from query params (added by the share email link)
+      var params = new URLSearchParams(window.location.search);
+      var collectionId   = params.get('collectionId');
+      var collectionName = params.get('collectionName');
+
+      var SCHEME_URL = collectionId
+        ? 'myapp://listOfConcepts?collectionId=' + encodeURIComponent(collectionId) +
+          (collectionName ? '&collectionName=' + encodeURIComponent(collectionName) : '')
+        : 'myapp://';
+
+      var storeBtn = document.getElementById('store-btn');
+      var hint = document.getElementById('hint');
+
+      var isAndroid = /android/i.test(navigator.userAgent);
+      var isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+      var isMobile = isAndroid || isIOS;
+
+      if (!isMobile) {
+        document.querySelector('.subtitle').textContent =
+          'ASHapp is a mobile app. Open this link on your phone.';
+        storeBtn.style.display = 'inline-block';
+        storeBtn.textContent = 'Download for Android';
+        return;
+      }
+
+      var hidden = Date.now();
+      var iframe = document.createElement('iframe');
+      iframe.style.display = 'none';
+      iframe.src = SCHEME_URL;
+      document.body.appendChild(iframe);
+
+      setTimeout(function () {
+        document.body.removeChild(iframe);
+        if (Date.now() - hidden < TIMEOUT_MS + 800) {
+          storeBtn.style.display = 'inline-block';
+          hint.style.display = 'block';
+          document.querySelector('.subtitle').textContent =
+            'Couldn\u2019t open the app automatically.';
+
+          if (isAndroid) {
+            storeBtn.href = STORE_ANDROID;
+            storeBtn.textContent = 'Get it on Google Play';
+          }
+        }
+      }, TIMEOUT_MS);
+    })();
+  </script>
+</body>
+</html>
