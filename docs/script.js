@@ -148,7 +148,7 @@ if (privacy) {
     <div class="doc-section"><h2>5. How We Use Your Data</h2>
       <p>We use your personal data for the following purposes:</p><ul>
         <li><strong>Service Provision:</strong> To provide and maintain the ASHapp learning platform</li>
-        <li><strong>AI Processing:</strong> To process your learning materials through OpenAI and Google services (including Google Gemini for handwritten-note OCR) for AI-generated collections, learning assistance, image generation for visual learning aids, and other AI-powered features</li>
+        <li><strong>AI Processing:</strong> To process your learning materials through Anthropic, OpenAI, and Google services (including Google Gemini for handwritten-note OCR) for AI-generated collections, learning assistance, image generation for visual learning aids, and other AI-powered features</li>
         <li><strong>Image Processing:</strong> To extract text from note images you upload (we assume you have the right to use them), we process printed notes on our servers to run OCR. When you enable handwritten notes, image content is sent to Google Gemini for vision OCR. We then use that text to create your learning materials. We do not keep the original images after OCR; we keep the learning materials derived from the process.</li>
         <li><strong>Voice mode (speech input):</strong> When you use voice mode, we process your spoken answer to check it against your learning content. On-device recognition may be handled by Apple or Google on your device. When cloud transcription is enabled, a short audio clip is sent to OpenAI for speech-to-text and is not stored after transcription by default.</li>
         <li><strong>Data Storage:</strong> To securely store your learning materials and progress on AWS cloud infrastructure</li>
@@ -163,13 +163,15 @@ if (privacy) {
       </ul></div>
     <div class="doc-section"><h2>7. Data Storage and Processing</h2>
       <p><strong>AWS Cloud Services:</strong> Your learning materials, account data, and app data are stored on Amazon Web Services (AWS) cloud infrastructure located in the European Union (EU) to ensure GDPR compliance.</p>
-      <p><strong>OpenAI AI Processing:</strong> When you use AI-generated features, your content may be processed by OpenAI’s services, including language models for generating learning collections and processing text, and image generation for visual learning aids. AI-generated content is filtered through OpenAI’s content moderation systems to prevent inappropriate, violent, or sexual content; image generation includes built-in safety filters for policy violations. Images are stored in our secure AWS S3 storage. We do not use your data to train OpenAI’s models.</p>
+      <p><strong>OpenAI AI Processing:</strong> When you use AI-generated features, your content may be processed by OpenAI’s services for image generation for visual learning aids. AI-generated content is filtered through OpenAI’s content moderation systems to prevent inappropriate, violent, or sexual content; image generation includes built-in safety filters for policy violations. Images are stored in our secure AWS S3 storage. We do not use your data to train OpenAI’s models.</p>
+      <p><strong>Anthropic Claude AI Processing:</strong> When you use AI features to generate learning collections or individual concepts, your learning materials (text content) are processed by Anthropic’s Claude models. Only the text content relevant to your learning materials is sent — no personal identifiers (email, user ID, or account information). Anthropic’s processing is subject to their terms and privacy policy. Under Anthropic’s API usage policies, your data is not used to train their models.</p>
       <p><strong>Google Gemini (handwritten OCR):</strong> When you import notes with the handwritten option enabled, image content is sent to Google Gemini to read handwriting. Only the image content is sent—no personal identifiers (email, user ID, or account information). Google's processing is subject to their terms and privacy policy. Extracted text is used in our app to create your learning materials. After processing, source images are removed from our storage; we do not retain them.</p>
       <p><strong>Data Security:</strong> All data is encrypted in transit using TLS (Transport Layer Security) and at rest using AES-256 encryption. We follow AWS security standards and industry best practices.</p></div>
     <div class="doc-section"><h2>8. Third-Party Services</h2>
       <p>We use the following third-party services:</p><ul>
         <li><strong>Amazon Web Services (AWS):</strong> For cloud hosting, data storage, and infrastructure services</li>
-        <li><strong>OpenAI:</strong> For AI-powered features including language models (text and learning collections) and image generation for visual aids. Content is moderated for safety and appropriateness. OpenAI does not use your data to train its models.</li>
+        <li><strong>OpenAI:</strong> For AI-powered image generation (visual learning aids). Content is moderated for safety and appropriateness. OpenAI does not use your data to train its models.</li>
+        <li><strong>Anthropic:</strong> For AI-powered text generation features — generating learning collections and individual concepts using Claude language models. Anthropic does not use your data to train its models under the applicable API usage policies.</li>
         <li><strong>Google Gemini:</strong> For handwritten-note OCR when you enable that option: image content is sent to Google Gemini. For printed notes, text is extracted on our servers and is not sent to Google or other external AI providers for that step. Only image content is sent for handwritten OCR; we do not include personal account identifiers in those requests.</li>
       </ul>
       <p>All third-party services are bound by data processing agreements and comply with GDPR requirements.</p></div>
@@ -227,20 +229,20 @@ if (terms) {
     <div class="doc-section"><h2>4. User-Generated Content</h2>
       <p>You retain ownership of all content you create in ASHapp. By using our services, you:</p><ul>
         <li><strong>Grant License:</strong> Grant us a license to store, process, and display your content to provide our services</li>
-        <li><strong>AI Processing:</strong> Consent to your learning materials being processed by OpenAI’s services for AI-generated features, with content moderation filtering</li>
+        <li><strong>AI Processing:</strong> Consent to your learning materials being processed by Anthropic’s Claude and OpenAI’s services for AI-generated features, with content moderation filtering</li>
         <li><strong>OCR Processing:</strong> Consent to uploaded images being processed for OCR: printed text on our servers, and when you choose handwritten mode, via Google Gemini (no personal identifiers sent)</li>
         <li><strong>Data Storage:</strong> Consent to your content being stored on AWS cloud infrastructure</li>
         <li><strong>Content Responsibility:</strong> Are responsible for ensuring your content doesn't violate any laws or third-party rights</li>
         <li><strong>Content Removal:</strong> Can delete your content at any time, which will be permanently removed from our systems</li>
       </ul></div>
     <div class="doc-section"><h2>5. AI-Powered Features</h2>
-      <p>ASHapp uses AI services from OpenAI and Google (including Gemini for handwritten-note OCR) to provide enhanced learning features:</p><ul>
-        <li><strong>OpenAI Processing:</strong> When you use AI features, your learning materials are processed by OpenAI’s services for text generation and image generation. All content is filtered through content moderation systems to prevent inappropriate content</li>
+      <p>ASHapp uses AI services from Anthropic, OpenAI, and Google (including Gemini for handwritten-note OCR) to provide enhanced learning features:</p><ul>
+        <li><strong>AI Processing:</strong> When you use AI features, your learning materials are processed by Anthropic’s Claude models for generating learning collections and concepts, and by OpenAI’s services for image generation. All content is filtered through content moderation systems to prevent inappropriate content</li>
         <li><strong>OCR (printed and handwritten):</strong> When you use OCR to import notes from images, printed text is extracted on our servers. If you enable handwritten notes, images are sent to Google Gemini for text extraction. No personal identifiers are sent with your images for OCR. Google processes content under its own terms. After processing, source images are removed from our storage; we keep the extracted text and learning materials you create.</li>
         <li><strong>Voice mode (microphone and speech):</strong> Voice mode uses your microphone and may use on-device speech recognition (Apple/Google) or, when enabled on our servers, send a short audio clip to OpenAI for transcription. By using voice mode you consent to that processing as described in the Privacy Policy. The recognized text is shown so you can see what will be checked.</li>
         <li><strong>Data Sharing:</strong> Your content is shared with these services solely for providing AI-generated learning assistance and text extraction</li>
-        <li><strong>Third-Party Terms:</strong> Use of AI features is also subject to OpenAI's and Google's terms of service and privacy policies where applicable</li>
-        <li><strong>No Training Use:</strong> Under the applicable API and provider policies, your content is not used to train OpenAI or Google models for these services in the way described in their documentation</li>
+        <li><strong>Third-Party Terms:</strong> Use of AI features is also subject to Anthropic's, OpenAI's, and Google's terms of service and privacy policies where applicable</li>
+        <li><strong>No Training Use:</strong> Under the applicable API and provider policies, your content is not used to train Anthropic, OpenAI, or Google models for these services in the way described in their documentation</li>
         <li><strong>AI Limitations:</strong> AI-generated content is for educational purposes only and should be verified for accuracy</li>
       </ul></div>
     <div class="doc-section"><h2>6. Data Storage and Security</h2>
