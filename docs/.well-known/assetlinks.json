@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "pl.ashapp.app",
+      "sha256_cert_fingerprints": [
+        "4C:44:29:C0:A2:FC:16:C1:30:8F:05:88:C4:5D:E0:02:41:E4:2D:06:15:54:CB:4E:17:76:EB:6B:CB:2B:2C:92"
+      ]
+    }
+  }
+]
