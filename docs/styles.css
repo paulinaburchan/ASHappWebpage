@@ -195,13 +195,16 @@ h1, h2, h3, h4, h5 { line-height: 1.15; font-weight: 700; }
 }
 
 /* === 6. BETA BANNER === */
+.sticky-header-group {
+  position: sticky; top: 0; z-index: 40;
+}
 .beta-banner {
   background: linear-gradient(135deg, rgba(46,89,70,0.07) 0%, rgba(255,142,83,0.07) 100%);
   border-bottom: 1.5px solid rgba(46,89,70,0.12);
   padding: 11px 0;
   text-align: center;
-  position: sticky; top: 0; z-index: 40;
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 .beta-text {
   color: var(--green);
@@ -212,7 +215,7 @@ h1, h2, h3, h4, h5 { line-height: 1.15; font-weight: 700; }
 
 /* === 7. HEADER & DESKTOP NAV === */
 .site-header {
-  position: sticky; top: 44px; z-index: 30;
+  z-index: 30;
   background: rgba(255,255,255,0.95);
   border-bottom: 1px solid var(--gray-200);
   backdrop-filter: blur(16px);
