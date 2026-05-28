@@ -50,10 +50,13 @@
     "name": "ASHapp",
     "applicationCategory": "EducationApplication",
     "operatingSystem": "Android",
-    "description": "Stop repeating. Start associating. AI flashcard app that generates mnemonic images and visual associations to accelerate language learning and concept memorisation. Features OCR note import, AI concept generation, typing mode with fuzzy matching, and multilingual support.",
+    "description": "Stop repeating. Start associating. AI flashcard app that generates mnemonic images and visual associations to accelerate language learning and concept memorisation. Features voice mode speech recognition, OCR note import, AI concept generation, typing mode with fuzzy matching, and multilingual support. Now available on Google Play.",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "downloadUrl": "https://play.google.com/store/apps/details?id=pl.ashapp.app",
+    "installUrl": "https://play.google.com/store/apps/details?id=pl.ashapp.app",
     "featureList": [
       "AI mnemonic image generation",
+      "Voice mode speech recognition",
       "OCR note-to-flashcard import",
       "AI concept collection generation",
       "Typing mode with fuzzy matching",
@@ -80,7 +83,9 @@
       "email": "admin@ashapp.pl",
       "contactType": "customer support"
     },
-    "sameAs": []
+    "sameAs": [
+      "https://play.google.com/store/apps/details?id=pl.ashapp.app"
+    ]
   }
   </script>
   <!-- Structured Data: FAQPage -->
@@ -89,6 +94,14 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is ASHapp different from Quizlet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ASHapp differs from Quizlet in five key ways: (1) Visual associations — you write your own mnemonic and ASHapp generates an AI image that encodes it; Quizlet has no equivalent. (2) True multilingual learning — one collection can hold up to 4 languages simultaneously; Quizlet is limited to two-sided cards. (3) Edit a single concept — in ASHapp you can edit and save one concept without touching the rest of the set; Quizlet rewrites the entire set. (4) Typo-tolerant typing — fuzzy matching accepts minor spelling mistakes as correct; Quizlet requires exact answers. (5) Voice Mode — speak your answers aloud and get graded instantly via Whisper AI (Pioneer plan); Quizlet has no voice-answer mode."
+        }
+      },
       {
         "@type": "Question",
         "name": "What makes ASHapp different from Anki?",
@@ -118,7 +131,7 @@
         "name": "Is ASHapp free to use?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. The Starter plan is completely free with no credit card required. It gives you 3 collections, up to 100 concepts per collection, and 3 lifetime AI mnemonic images to try the core feature. Paid plans (Achiever and Pioneer) unlock more AI features and higher limits and will be available via Google Play."
+          "text": "Yes. The Starter plan is completely free with no credit card required. It gives you 3 collections, up to 100 concepts per collection, and 3 lifetime AI mnemonic images to try the core feature. Paid plans (Achiever and Pioneer) unlock more AI features, higher limits, and Voice Mode — all available now on Google Play."
         }
       },
       {
@@ -136,6 +149,22 @@
           "@type": "Answer",
           "text": "Yes, with the Pioneer plan. ASHapp's OCR feature lets you photograph a page of notes, a textbook page, or a handwritten vocabulary list. The AI reads the image and automatically creates multiple flashcard concepts from the extracted text — not one word at a time, but intelligently splitting the content into individual learnable items."
         }
+      },
+      {
+        "@type": "Question",
+        "name": "What is Voice Mode in ASHapp?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Voice Mode lets you speak your answers aloud instead of typing them. Powered by OpenAI Whisper speech recognition, it captures what you say, transcribes it, and checks it against the correct answer using intelligent fuzzy matching. This trains active recall and pronunciation simultaneously — ideal for language learners. Voice Mode is exclusive to the Pioneer plan (800 transcriptions per month) and works for any language in your collection."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does ASHapp Typing Mode accept typos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. ASHapp uses intelligent fuzzy matching (Levenshtein distance) to grade typed answers — minor typos, missing accents, or small spelling errors are accepted as correct. The goal is to test real knowledge, not keyboard accuracy. This makes daily practice feel natural and forgiving while still requiring genuine understanding."
+        }
       }
     ]
   }
@@ -143,10 +172,10 @@
 </head>
 <body>
 
-  <!-- Beta Banner -->
+  <!-- Live Banner -->
   <div class="beta-banner">
     <div class="container">
-      <span class="beta-text">ASHapp is currently in beta — <a href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta&body=Hi! I'm interested in joining the ASHapp beta test." style="color:inherit;text-decoration:underline;">join the beta now</a></span>
+      <span class="beta-text">🎉 ASHapp is now <strong>live on Google Play</strong> — <a href="https://play.google.com/store/apps/details?id=pl.ashapp.app" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;">download it free today</a></span>
     </div>
   </div>
 
@@ -160,7 +189,7 @@
         <a href="#features">Features</a>
         <a href="./pricing">Pricing</a>
         <a href="./mnemonics">Mnemonics</a>
-        <a class="nav-cta" href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta&body=Hi! I'm interested in joining the ASHapp beta test.">Join Beta</a>
+        <a class="nav-cta" href="https://play.google.com/store/apps/details?id=pl.ashapp.app" target="_blank" rel="noopener noreferrer">Download Free</a>
       </nav>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu">
         <i data-lucide="menu"></i>
@@ -188,8 +217,8 @@
       <a href="./terms"><i data-lucide="file-text"></i>Terms of Service</a>
     </nav>
     <div class="drawer-cta">
-      <a class="btn btn-primary" style="width:100%;justify-content:center;" href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta&body=Hi! I'm interested in joining the ASHapp beta test.">
-        <i data-lucide="mail"></i> Join Beta
+      <a class="btn btn-primary" style="width:100%;justify-content:center;" href="https://play.google.com/store/apps/details?id=pl.ashapp.app" target="_blank" rel="noopener noreferrer">
+        <i data-lucide="download"></i> Download Free on Google Play
       </a>
     </div>
   </div>
@@ -201,8 +230,8 @@
       <div class="container hero-inner">
         <div class="hero-copy">
           <div class="hero-badge">
-            <i data-lucide="sparkles"></i>
-            AI-Powered Mnemonic Learning
+            <i data-lucide="rocket"></i>
+            Now Live on Google Play
           </div>
           <h1>Learn Faster with <span class="highlight">Mnemonics</span> &amp; Visual AI</h1>
           <p class="hero-slogan brand-slogan" aria-label="ASHapp slogan">
@@ -212,17 +241,16 @@
             The only flashcard app that uses AI to <strong>visualize your wildest mental associations</strong> — because your brain remembers the absurd far better than the boring.
           </p>
           <div class="hero-ctas">
-            <div class="btn-play" aria-hidden="true">
+            <a class="btn-play" href="https://play.google.com/store/apps/details?id=pl.ashapp.app" target="_blank" rel="noopener noreferrer" aria-label="Download ASHapp on Google Play">
               <i data-lucide="play-circle" class="play-icon"></i>
               <div class="btn-play-text">
-                <small>Coming to</small>
+                <small>Get it on</small>
                 <strong>Google Play</strong>
               </div>
-              <span class="btn-play-badge">Soon</span>
-            </div>
-            <a class="btn btn-outline" href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta&body=Hi! I'm interested in joining the ASHapp beta test. Please let me know how I can get access.%0D%0A%0D%0AThanks!">
-              <i data-lucide="mail"></i>
-              Join Beta
+            </a>
+            <a class="btn btn-outline" href="#features">
+              <i data-lucide="sparkles"></i>
+              Explore Features
             </a>
           </div>
           <p class="hero-note">
@@ -401,6 +429,13 @@
               <p>Master multiple languages simultaneously. Switch between languages effortlessly and build a truly polyglot learning experience with no limits.</p>
             </div>
           </div>
+          <div class="feature-card fade-up fade-up-delay-1">
+            <div class="feature-icon-wrap"><i data-lucide="mic"></i></div>
+            <div>
+              <h3>Voice Mode</h3>
+              <p>Speak your answers out loud instead of typing — powered by Whisper speech recognition. Practice pronunciation and active recall at the same time, as if you had a conversation partner testing you.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -454,8 +489,9 @@
               <li class="pricing-feature muted"><span class="cross"><i data-lucide="x"></i></span>AI collection generation</li>
               <li class="pricing-feature muted"><span class="cross"><i data-lucide="x"></i></span>AI context &amp; related words</li>
               <li class="pricing-feature muted"><span class="cross"><i data-lucide="x"></i></span>OCR note import</li>
+              <li class="pricing-feature muted"><span class="cross"><i data-lucide="x"></i></span>Voice Mode</li>
             </ul>
-            <a class="btn btn-outline" href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta&body=Hi!%0D%0A%0D%0AI would like to join the ASHapp beta and start with the free Starter plan.%0D%0A%0D%0AThanks!">Join Beta Free</a>
+            <a class="btn btn-outline" href="https://play.google.com/store/apps/details?id=pl.ashapp.app" target="_blank" rel="noopener noreferrer">Download Free</a>
           </div>
           <!-- Achiever -->
           <div class="pricing-card fade-up fade-up-delay-2">
@@ -472,8 +508,9 @@
               <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>3 AI collection generations / month</li>
               <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>10 AI context requests / month</li>
               <li class="pricing-feature muted"><span class="cross"><i data-lucide="x"></i></span>OCR note import</li>
+              <li class="pricing-feature muted"><span class="cross"><i data-lucide="x"></i></span>Voice Mode</li>
             </ul>
-            <a class="btn btn-outline" href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta - Achiever plan&body=Hi!%0D%0A%0D%0AI'm interested in the Achiever plan and would like to join the beta.%0D%0A%0D%0AThanks!">Get Early Access</a>
+            <a class="btn btn-outline" href="https://play.google.com/store/apps/details?id=pl.ashapp.app" target="_blank" rel="noopener noreferrer">Download &amp; Upgrade</a>
           </div>
           <!-- Pioneer -->
           <div class="pricing-card featured fade-up fade-up-delay-3">
@@ -490,8 +527,9 @@
               <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>100 AI collection generations / month</li>
               <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>500 AI context requests / month</li>
               <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>50 OCR note imports / month</li>
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>Voice Mode — 800 transcriptions / month</li>
             </ul>
-            <a class="btn btn-primary" href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta - Pioneer plan&body=Hi!%0D%0A%0D%0AI'm interested in the Pioneer plan and would like to join the beta.%0D%0A%0D%0AThanks!">Get Early Access</a>
+            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=pl.ashapp.app" target="_blank" rel="noopener noreferrer">Download &amp; Upgrade</a>
           </div>
         </div>
         <div style="text-align:center;margin-top:28px;">
@@ -511,6 +549,24 @@
           <p class="section-subtitle">Everything you need to know before you start learning.</p>
         </div>
         <div id="homeFaqList" class="faq-list fade-up">
+          <div class="faq-item">
+            <button class="faq-question">
+              How is ASHapp different from Quizlet?
+              <i data-lucide="plus" class="faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Several things set ASHapp apart from Quizlet:
+                <ul style="margin:10px 0 0 18px;line-height:1.8;">
+                  <li><strong>Visual associations you own.</strong> ASHapp lets you write your personal mnemonic association for each concept and generate an AI image that brings it to life. Quizlet has no equivalent — your mental hook is what makes a concept stick, and ASHapp builds the whole learning experience around it.</li>
+                  <li><strong>True multilingual learning.</strong> A single ASHapp collection can hold up to 4 languages simultaneously — so you can study, say, Korean while showing English and Polish as hints. Quizlet is limited to two-sided term/definition cards.</li>
+                  <li><strong>Edit one concept, not the whole set.</strong> In ASHapp you can open, edit, and save a single concept in seconds without touching the rest of your collection. Quizlet's set editor rewrites the entire set on every save.</li>
+                  <li><strong>Typo-tolerant typing.</strong> ASHapp uses fuzzy matching to accept minor spelling mistakes as correct — the app tests knowledge, not keyboard skills. Quizlet requires exact matches.</li>
+                  <li><strong>Voice Mode.</strong> Speak your answers aloud (Pioneer plan). ASHapp transcribes your speech with Whisper AI and grades it instantly. Quizlet has no native voice-answer mode.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
           <div class="faq-item">
             <button class="faq-question">
               What makes ASHapp different from Anki?
@@ -551,7 +607,7 @@
             </button>
             <div class="faq-answer">
               <div class="faq-answer-inner">
-                Yes. The <strong>Starter plan is completely free</strong> with no credit card required. It gives you 3 collections, up to 100 concepts per collection, and 3 lifetime AI mnemonic images to try the core feature. Paid plans (Achiever and Pioneer) unlock more AI features and higher limits and will be available via Google Play.
+                Yes. The <strong>Starter plan is completely free</strong> with no credit card required. It gives you 3 collections, up to 100 concepts per collection, and 3 lifetime AI mnemonic images to try the core feature. Paid plans (Achiever and Pioneer) unlock more AI features and higher limits — <a href="https://play.google.com/store/apps/details?id=pl.ashapp.app" target="_blank" rel="noopener noreferrer" style="color:var(--green);font-weight:600;">available now on Google Play</a>.
               </div>
             </div>
           </div>
@@ -577,6 +633,28 @@
               </div>
             </div>
           </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              What is Voice Mode?
+              <i data-lucide="plus" class="faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Voice Mode lets you <strong>speak your answers aloud</strong> instead of typing them. Powered by OpenAI Whisper speech recognition, it captures what you say, transcribes it, and checks it against the correct answer using the same smart fuzzy matching as Typing Mode. It is the fastest way to drill both <em>active recall</em> and <em>pronunciation</em> at the same time — especially useful for language learners who want to practise speaking. Voice Mode is exclusive to the <strong>Pioneer plan</strong> (800 transcriptions per month).
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Does Typing Mode accept typos and spelling mistakes?
+              <i data-lucide="plus" class="faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes. ASHapp uses <strong>intelligent fuzzy matching</strong> to grade typed answers — minor typos, missing accents, or small spelling errors are accepted as correct. The goal is to test real knowledge of the concept, not keyboard accuracy. This makes daily practice feel natural and forgiving, while still requiring you to genuinely know the answer.
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -585,9 +663,9 @@
     <section class="cta-band">
       <div class="container center">
         <h2 class="brand-slogan">Stop repeating. <span class="slogan-start">Start</span> <span class="slogan-assoc">associating</span>.</h2>
-        <p>Join the mnemonic revolution — learn with associations, not endless drills.</p>
-        <a class="btn btn-highlight btn-lg" href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta&body=Hi! I'm interested in joining the ASHapp beta test.">
-          <i data-lucide="mail"></i> Join the Beta Today
+        <p>Join the mnemonic revolution — learn with associations, not endless drills. Now available free on Google Play.</p>
+        <a class="btn btn-highlight btn-lg" href="https://play.google.com/store/apps/details?id=pl.ashapp.app" target="_blank" rel="noopener noreferrer">
+          <i data-lucide="download"></i> Download Free on Google Play
         </a>
       </div>
     </section>
@@ -603,6 +681,11 @@
         <a class="btn btn-primary" href="mailto:admin@ashapp.pl?subject=Feature Request for ASHapp&body=Hi!%0D%0A%0D%0AI would love to see in ASHapp the following feature...%0D%0A%0D%0ABecause...%0D%0A%0D%0AThanks for building such an amazing learning tool!">
           <i data-lucide="send"></i> Share Your Idea
         </a>
+        <div style="margin-top:20px;">
+          <a class="btn btn-outline" href="https://play.google.com/store/apps/details?id=pl.ashapp.app" target="_blank" rel="noopener noreferrer">
+            <i data-lucide="star"></i> Leave a Review on Google Play
+          </a>
+        </div>
       </div>
     </section>
 

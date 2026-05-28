@@ -1,0 +1,61 @@
+# ASHapp
+
+> AI-powered flashcard app with mnemonic image generation, voice mode, and visual associations for faster, deeper learning. Available free on Google Play.
+
+ASHapp is a mobile learning app (Android) built around the mnemonic and association method — the science-backed technique where linking new information to a vivid mental image or existing memory dramatically improves recall (up to 72% better than repetition alone). The app combines flashcards, AI-generated mnemonic images, speech recognition voice mode, OCR note import, and multilingual support in one tool.
+
+## Key features
+
+- **Mnemonic image generation** — AI (Google Gemini) generates a unique visual that encodes the memory link for each flashcard concept
+- **Voice Mode** — speak your answers aloud (OpenAI Whisper STT); grades pronunciation and recall simultaneously; Pioneer plan only (800 transcriptions/month)
+- **Typing Mode** — type answers with fuzzy matching that accepts minor typos; available on all plans
+- **Flashcard Mode** — classic swipe-to-review with AI-enriched context (example sentences, related words)
+- **OCR note import** — photograph handwritten notes or textbook pages; AI creates multiple flashcard concepts automatically; Pioneer plan only
+- **AI collection generation** — describe a topic and AI generates a ready-to-study set of concepts; Achiever (3/month) and Pioneer (100/month)
+- **AI context & related words** — enriches any card with usage examples, synonyms, antonyms
+- **Multilingual collections** — up to 4 languages per collection (Pioneer); study one language while showing another as the prompt
+- **Daily streak & personal goals** — gamified progress tracking
+- **Collection sharing** — share collections with other users
+
+## Subscription plans
+
+- **Starter (free)** — 3 collections, 100 concepts/collection, 3 lifetime AI mnemonic images
+- **Achiever** — unlimited collections, 300 concepts/collection, 10 AI images/month, 3 AI collections/month, 10 AI context requests/month
+- **Pioneer** — unlimited collections & concepts, 50 AI images/month, 100 AI collections/month, 500 AI context/month, 50 OCR imports/month, Voice Mode (800/month), multilingual (up to 4 languages)
+
+## Who is it for?
+
+ASHapp is ideal for:
+- Language learners who want to memorise vocabulary through associations rather than pure repetition
+- Students learning concepts, definitions, or factual material (history, medicine, law, sciences)
+- Anyone who has tried Anki or Duolingo and found them too passive — ASHapp puts the association *you* create at the centre of every card
+- Polyglots studying multiple languages simultaneously
+
+## What makes ASHapp different from Quizlet?
+
+Five key differences:
+1. **Visual associations** — you write your personal mnemonic and ASHapp generates an AI image that brings it to life. Quizlet has no equivalent.
+2. **True multilingual learning** — one collection holds up to 4 languages simultaneously. Quizlet is limited to two-sided term/definition cards.
+3. **Edit one concept, not the whole set** — change a single card in seconds without touching the rest. Quizlet rewrites the entire set on every save.
+4. **Typo-tolerant typing** — fuzzy matching accepts minor spelling errors as correct. Quizlet requires exact matches.
+5. **Voice Mode** — speak your answers aloud and get graded instantly via OpenAI Whisper (Pioneer plan). Quizlet has no native voice-answer mode.
+
+## What makes ASHapp different from Anki?
+
+Unlike Anki, ASHapp uses AI to automatically generate visual mnemonic images. It also generates full flashcard collections from a topic description, imports handwritten notes via OCR, and enriches every card with AI context, synonyms, and antonyms. Anki is a blank canvas; ASHapp does the heavy lifting for you while keeping association-first learning at its core.
+
+## Download
+
+Available on Google Play: https://play.google.com/store/apps/details?id=pl.ashapp.app
+
+## Pages
+
+- [Home](https://ashapp.pl/)
+- [Pricing](https://ashapp.pl/pricing)
+- [Why Mnemonics?](https://ashapp.pl/mnemonics)
+- [Privacy Policy](https://ashapp.pl/privacy)
+- [Terms of Service](https://ashapp.pl/terms)
+
+## Contact
+
+admin@ashapp.pl

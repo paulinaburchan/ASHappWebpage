@@ -5,6 +5,9 @@ Allow: /
 # Sitemap location
 Sitemap: https://ashapp.pl/sitemap.xml
 
+# LLMs.txt - AI crawler guidance
+# https://llmstxt.org
+
 # Crawl-delay (optional, helps prevent overloading your server)
 Crawl-delay: 1
 

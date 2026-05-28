@@ -35,6 +35,14 @@
     "mainEntity": [
       {
         "@type": "Question",
+        "name": "How is ASHapp different from Quizlet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ASHapp differs from Quizlet in five key ways: (1) Visual associations — you write your own mnemonic and ASHapp generates an AI image that encodes it; Quizlet has no equivalent. (2) True multilingual learning — one collection can hold up to 4 languages simultaneously; Quizlet is limited to two-sided cards. (3) Edit a single concept — change one card without touching the rest of the set; Quizlet rewrites the entire set. (4) Typo-tolerant typing — fuzzy matching accepts minor spelling mistakes; Quizlet requires exact answers. (5) Voice Mode — speak your answers aloud and get graded instantly via Whisper AI (Pioneer plan); Quizlet has no voice-answer mode."
+        }
+      },
+      {
+        "@type": "Question",
         "name": "What is OCR note import?",
         "acceptedAnswer": {
           "@type": "Answer",
@@ -83,6 +91,22 @@
       },
       {
         "@type": "Question",
+        "name": "What is Voice Mode?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Voice Mode lets you speak your answers aloud instead of typing them. Powered by OpenAI Whisper speech recognition, it transcribes your speech and checks it against the correct answer using fuzzy matching. This trains active recall and pronunciation simultaneously — ideal for language learners. Voice Mode is exclusive to the Pioneer plan (800 transcriptions per month) and supports any language in your collection."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does Typing Mode handle spelling mistakes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ASHapp's Typing Mode uses intelligent fuzzy matching (Levenshtein distance) to evaluate your answers. Minor typos, missing accents, or small spelling variations are counted as correct — so the app focuses on whether you actually know the concept, not whether you can type perfectly. You can configure the difficulty threshold in collection settings."
+        }
+      },
+      {
+        "@type": "Question",
         "name": "What happens to my data if I cancel?",
         "acceptedAnswer": {
           "@type": "Answer",
@@ -106,10 +130,10 @@
 </head>
 <body>
 
-  <!-- Beta Banner -->
+  <!-- Live Banner -->
   <div class="beta-banner">
     <div class="container">
-      <span class="beta-text">ASHapp is currently in beta — <a href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta&body=Hi!%0D%0A%0D%0AI%27m interested in joining the ASHapp beta test. Please let me know how I can get access.%0D%0A%0D%0AThanks!" style="color:inherit;text-decoration:underline;">join the beta now</a></span>
+      <span class="beta-text">🎉 ASHapp is now <strong>live on Google Play</strong> — <a href="https://play.google.com/store/apps/details?id=pl.ashapp.app" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;">download it free today</a></span>
     </div>
   </div>
 
@@ -123,7 +147,7 @@
         <a href="./#features">Features</a>
         <a href="./pricing" class="active">Pricing</a>
         <a href="./mnemonics">Mnemonics</a>
-        <a class="nav-cta" href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta&body=Hi!%0D%0A%0D%0AI%27m interested in joining the ASHapp beta test. Please let me know how I can get access.%0D%0A%0D%0AThanks!">Join Beta</a>
+        <a class="nav-cta" href="https://play.google.com/store/apps/details?id=pl.ashapp.app" target="_blank" rel="noopener noreferrer">Download Free</a>
       </nav>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu">
         <i data-lucide="menu"></i>
@@ -151,8 +175,8 @@
       <a href="./terms"><i data-lucide="file-text"></i>Terms of Service</a>
     </nav>
     <div class="drawer-cta">
-      <a class="btn btn-primary" style="width:100%;justify-content:center;" href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta&body=Hi!%0D%0A%0D%0AI%27m interested in joining the ASHapp beta test. Please let me know how I can get access.%0D%0A%0D%0AThanks!">
-        <i data-lucide="mail"></i> Join Beta
+      <a class="btn btn-primary" style="width:100%;justify-content:center;" href="https://play.google.com/store/apps/details?id=pl.ashapp.app" target="_blank" rel="noopener noreferrer">
+        <i data-lucide="download"></i> Download Free on Google Play
       </a>
     </div>
   </div>
@@ -190,11 +214,12 @@
               <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>Collection sharing</li>
               <li class="pricing-feature muted"><span class="cross"><i data-lucide="x"></i></span>AI collection generation</li>
               <li class="pricing-feature muted"><span class="cross"><i data-lucide="x"></i></span>AI context &amp; related words</li>
-              <li class="pricing-feature muted"><span class="cross"><i data-lucide="x"></i></span>Multilingual collections <em>(2 translations)</em></li>
+              <li class="pricing-feature muted"><span class="cross"><i data-lucide="x"></i></span>Multilingual collections</li>
               <li class="pricing-feature muted"><span class="cross"><i data-lucide="x"></i></span>OCR note import</li>
+              <li class="pricing-feature muted"><span class="cross"><i data-lucide="x"></i></span>Voice Mode</li>
             </ul>
-            <a class="btn btn-outline" href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta&body=Hi! I would like to join the ASHapp beta and start with the free Starter plan.">
-              <i data-lucide="mail"></i> Join Beta Free
+            <a class="btn btn-outline" href="https://play.google.com/store/apps/details?id=pl.ashapp.app" target="_blank" rel="noopener noreferrer">
+              <i data-lucide="download"></i> Download Free
             </a>
           </div>
 
@@ -214,11 +239,12 @@
               <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>10 AI context requests / month</li>
               <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>10 AI related words requests / month</li>
               <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>All learning &amp; writing modes</li>
-              <li class="pricing-feature muted"><span class="cross"><i data-lucide="x"></i></span>Multilingual collections <em>(2 translations)</em></li>
+              <li class="pricing-feature muted"><span class="cross"><i data-lucide="x"></i></span>Multilingual collections</li>
               <li class="pricing-feature muted"><span class="cross"><i data-lucide="x"></i></span>OCR note import</li>
+              <li class="pricing-feature muted"><span class="cross"><i data-lucide="x"></i></span>Voice Mode</li>
             </ul>
-            <a class="btn btn-outline" href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta for Achiever early-bird pricing&body=Hi! I'm interested in the Achiever plan and would like to join the beta to get early-bird pricing.">
-              <i data-lucide="mail"></i> Get Early Access
+            <a class="btn btn-outline" href="https://play.google.com/store/apps/details?id=pl.ashapp.app" target="_blank" rel="noopener noreferrer">
+              <i data-lucide="download"></i> Download &amp; Upgrade
             </a>
           </div>
 
@@ -238,20 +264,21 @@
               <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>500 AI context requests / month</li>
               <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>500 AI related words requests / month</li>
               <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>50 OCR note imports / month</li>
-              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>Multilingual collections <em>(up to 2 translations)</em></li>
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>Multilingual collections <em>(up to 4 languages)</em></li>
               <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>All learning &amp; writing modes</li>
+              <li class="pricing-feature"><span class="check"><i data-lucide="check"></i></span>Voice Mode — 800 transcriptions / month</li>
             </ul>
-            <a class="btn btn-primary" href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta for Pioneer early-bird pricing&body=Hi! I'm interested in the Pioneer plan and would like to join the beta to get early-bird pricing.">
-              <i data-lucide="mail"></i> Get Early Access
+            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=pl.ashapp.app" target="_blank" rel="noopener noreferrer">
+              <i data-lucide="download"></i> Download &amp; Upgrade
             </a>
           </div>
 
         </div>
 
-        <!-- Beta note -->
+        <!-- Note -->
         <div style="text-align:center;margin-top:36px;">
           <div class="beta-notice" style="display:inline-block;max-width:600px;">
-            <p><i data-lucide="info" style="width:16px;height:16px;vertical-align:middle;margin-right:6px;"></i> <strong>Beta Early-Bird Offer:</strong> Join the beta now and lock in exclusive discounted pricing when paid plans launch. Payments will be available in all European currencies via PayPal, with monthly auto-renewal and promo code support.</p>
+            <p><i data-lucide="info" style="width:16px;height:16px;vertical-align:middle;margin-right:6px;"></i> Paid plans are <strong>available now on Google Play</strong>. Payment is processed securely via Google Play Billing. Early supporters helped shape the app — thank you! 🙌</p>
           </div>
         </div>
       </div>
@@ -346,10 +373,16 @@
                 <td class="td-featured"><span class="tbl-check"><i data-lucide="check"></i></span></td>
               </tr>
               <tr>
-                <td><i data-lucide="globe"></i> Multilingual collections <em style="font-size:0.8em">(2 translation languages)</em></td>
+                <td><i data-lucide="globe"></i> Multilingual collections <em style="font-size:0.8em">(up to 4 languages)</em></td>
                 <td><span class="tbl-cross"><i data-lucide="x"></i></span></td>
                 <td><span class="tbl-cross"><i data-lucide="x"></i></span></td>
                 <td class="td-featured"><span class="tbl-check"><i data-lucide="check"></i></span></td>
+              </tr>
+              <tr>
+                <td><i data-lucide="mic"></i> Voice Mode</td>
+                <td><span class="tbl-cross"><i data-lucide="x"></i></span></td>
+                <td><span class="tbl-cross"><i data-lucide="x"></i></span></td>
+                <td class="td-featured">800 / month</td>
               </tr>
             </tbody>
           </table>
@@ -404,12 +437,12 @@
 
           <div class="faq-item">
             <button class="faq-question">
-              When will paid plans be available?
+              How do I upgrade to Achiever or Pioneer?
               <i data-lucide="plus" class="faq-icon"></i>
             </button>
             <div class="faq-answer">
               <div class="faq-answer-inner">
-                Paid plans (Achiever and Pioneer) will launch after the beta period. We will announce pricing before the public launch. Beta testers will receive exclusive early-bird discounts as a thank-you for helping shape the app. Payment will be available in all European currencies via PayPal, with monthly auto-renewal and support for promo codes.
+                Both paid plans are <strong>available now on Google Play</strong>. Download ASHapp for free, then open the app and navigate to Profile → Subscription to upgrade. Payment is processed securely via Google Play Billing in your local currency.
               </div>
             </div>
           </div>
@@ -440,6 +473,48 @@
 
           <div class="faq-item">
             <button class="faq-question">
+              How is ASHapp different from Quizlet?
+              <i data-lucide="plus" class="faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <ul style="margin:4px 0 0 18px;line-height:1.8;">
+                  <li><strong>Visual associations.</strong> Write your own mnemonic and generate an AI image that brings it to life. Quizlet has no equivalent.</li>
+                  <li><strong>Multilingual collections.</strong> One collection, up to 4 languages at once. Quizlet is two-sided term/definition only.</li>
+                  <li><strong>Edit one concept.</strong> Change a single card without touching the rest of the set. Quizlet rewrites the entire set on every save.</li>
+                  <li><strong>Typo tolerance.</strong> Fuzzy matching accepts minor spelling errors. Quizlet requires exact matches.</li>
+                  <li><strong>Voice Mode.</strong> Speak your answers; graded instantly via Whisper AI (Pioneer plan). Quizlet has no native voice-answer mode.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              How does Typing Mode handle spelling mistakes?
+              <i data-lucide="plus" class="faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                ASHapp's Typing Mode uses <strong>intelligent fuzzy matching</strong> (Levenshtein distance) to grade your answers. Minor typos, missing accents, or small spelling variations are accepted as correct — the app tests whether you <em>know</em> the concept, not whether you can type perfectly. This makes it forgiving enough for daily practice while still requiring genuine knowledge of the answer.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              What is Voice Mode and why is it useful?
+              <i data-lucide="plus" class="faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <strong>Voice Mode</strong> lets you speak your answers out loud instead of typing them. Powered by OpenAI Whisper speech recognition, it listens to what you say, transcribes it, and compares it against the correct answer with the same smart fuzzy-matching used in Typing Mode. This trains both <em>active recall</em> and <em>pronunciation</em> simultaneously — invaluable for language learners who want to practise speaking, not just reading. It is exclusive to the <strong>Pioneer plan</strong> (800 transcriptions per month), and works for any language your collection contains.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
               What happens to my data if I cancel?
               <i data-lucide="plus" class="faq-icon"></i>
             </button>
@@ -457,10 +532,10 @@
     <!-- CTA BAND -->
     <section class="cta-band">
       <div class="container center">
-        <h2>Join the Beta and <span style="color:var(--highlight)">Lock In Early Pricing</span></h2>
-        <p>Be among the first to use ASHapp and secure exclusive early-bird pricing on paid plans when they launch.</p>
-        <a class="btn btn-highlight btn-lg" href="mailto:admin@ashapp.pl?subject=I want to join ASHapp beta&body=Hi! I'm interested in joining the ASHapp beta to get early-bird pricing on paid plans.">
-          <i data-lucide="mail"></i> Join the Beta Today
+        <h2>Ready to <span style="color:var(--highlight)">Learn Smarter?</span></h2>
+        <p>Download ASHapp free on Google Play and start learning with mnemonics, AI, and Voice Mode today.</p>
+        <a class="btn btn-highlight btn-lg" href="https://play.google.com/store/apps/details?id=pl.ashapp.app" target="_blank" rel="noopener noreferrer">
+          <i data-lucide="download"></i> Download Free on Google Play
         </a>
       </div>
     </section>
