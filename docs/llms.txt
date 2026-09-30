@@ -8,8 +8,8 @@ ASHapp is a mobile learning app (Android) built around the mnemonic and associat
 
 - **Mnemonic image generation** — AI (Google Gemini) generates a unique visual that encodes the memory link for each flashcard concept
 - **Voice Mode** — speak your answers aloud (OpenAI Whisper STT); grades pronunciation and recall simultaneously; Pioneer plan only (800 transcriptions/month)
-- **Typing Mode** — type answers with fuzzy matching that accepts minor typos; available on all plans
-- **Flashcard Mode** — classic swipe-to-review with AI-enriched context (example sentences, related words)
+- **Type Mode** — type answers with fuzzy matching that accepts minor typos; available on all plans
+- **Cards Mode** — classic flashcard swipe-to-review with AI-enriched context (example sentences, related words)
 - **OCR note import** — photograph handwritten notes or textbook pages; AI creates multiple flashcard concepts automatically; Pioneer plan only
 - **AI collection generation** — describe a topic and AI generates a ready-to-study set of concepts; Achiever (3/month) and Pioneer (100/month)
 - **AI context & related words** — enriches any card with usage examples, synonyms, antonyms

@@ -132,11 +132,11 @@ if (privacy) {
     </div>
     <div class="doc-section"><h2>3. Voice (speech input)</h2>
       <p>We process voice input in learning mode as follows:</p>
-      <p><strong>Purpose:</strong> In voice mode you practice by speaking your answer. We use the result to compare against your learning content, the same way as typing mode.</p>
+      <p><strong>Purpose:</strong> In voice mode you practice by speaking your answer. We use the result to compare against your learning content, the same way as Type mode.</p>
       <p><strong>On-device processing:</strong> When the app uses on-device speech recognition, audio is processed on your phone or tablet by the operating system (Apple or Google) according to that platform’s settings and policies.</p>
       <p><strong>Cloud transcription:</strong> When our servers are configured for cloud speech-to-text, a short recording of your answer is sent securely to OpenAI for transcription only. We do not store the audio file after transcription by default.</p>
       <p><strong>Retention:</strong> Transcripts you submit are treated like other learning activity. We do not keep uploaded voice audio after transcription unless we explicitly change that policy and notify you.</p>
-      <p><strong>Optional:</strong> Voice mode requires microphone access. You can deny it and use flashcards or typing mode instead.</p>
+      <p><strong>Optional:</strong> Voice mode requires microphone access. You can deny it and use Cards or Type mode instead.</p>
     </div>
     <div class="doc-section"><h2>4. Data We Collect</h2>
       <p>We collect the following types of personal data:</p><ul>
